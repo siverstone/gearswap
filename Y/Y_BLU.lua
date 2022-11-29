@@ -1,6 +1,7 @@
 function get_sets()
     set_language('japanese')
 
+
     mote_include_version = 2
     include('Mote-Include.lua')
 end
