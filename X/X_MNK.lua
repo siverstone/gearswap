@@ -159,7 +159,7 @@ function init_gear_sets()
     
     sets.precast.WS.wsd_vit = {
         ammo="ノブキエリ",
-        head={ name="ＨＥクラウン+2", augments={'Enhances "Penance" effect',}},
+        head={ name="ＨＥクラウン+3", augments={'Enhances "Penance" effect',}},
         body="ＡＮシクラス+3",
         hands="ＡＮグローブ+3",
         legs="真膝丸膝甲",
@@ -176,12 +176,12 @@ function init_gear_sets()
     
     sets.precast.WS.wsd_kick = {
         ammo="ノブキエリ",
-        head={ name="ＨＥクラウン+2", augments={'Enhances "Penance" effect',}},
+        head={ name="ＨＥクラウン+3", augments={'Enhances "Penance" effect',}},
         body="ＢＫシクラス+3",
         hands="ＡＮグローブ+3",
         legs="真膝丸膝甲",
         -- feet="乾闥婆脛当改",
-        feet="ＢＫゲートル+2",
+        feet="ＢＫゲートル+3",
         neck="モンクの喉輪+2",
         waist="月虹帯+1",
         left_ear="シェリダピアス",
@@ -214,7 +214,7 @@ function init_gear_sets()
             body="ＢＫシクラス+3",
             hands="ＢＫグローブ+2",
             legs="ＢＫホーズ+2",
-            feet="ＢＫゲートル+2",
+            feet="ＢＫゲートル+3",
         neck="サンクトネックレス",
         waist="エスカンストーン",
         left_ear="昏黄の耳飾り",
@@ -306,7 +306,7 @@ function init_gear_sets()
     body={ name="エメットハーネス+1", augments={'Path: A',}},
     hands="クーリスグローブ",
     legs="オバタラサブリガ",
-    feet="ＢＫゲートル+2",
+    feet="ＢＫゲートル+3",
     neck={ name="アンムーヴカラー+1", augments={'Path: A',}},
     waist="月虹帯+1",
     left_ear="クリプティクピアス",
@@ -318,11 +318,11 @@ function init_gear_sets()
 
     sets.idle = {
     ammo="ストンチタスラム+1",
-    head="ニャメヘルム",
-    body="ニャメメイル",
+    head="ＢＫクラウン+2",
+    body={ name="ＨＥシクラス+3", augments={'Enhances "Formless Strikes" effect',}},
     hands="ニャメガントレ",
-    legs="ニャメフランチャ",
-    feet="ニャメソルレット",
+    legs="ＢＫホーズ+2",
+    feet="ＢＫゲートル+3",
     neck={ name="バーシチョーカー+1", augments={'Path: A',}},
     waist="エングレイブベルト",
     left_ear="ハーティーピアス",
@@ -396,7 +396,7 @@ function init_gear_sets()
     body="ＢＫシクラス+3",
     hands="ＢＫグローブ+2",
     legs="ＢＫホーズ+2",
-    feet="ＢＫゲートル+2",
+    feet="ＢＫゲートル+3",
     neck={ name="アンムーヴカラー+1", augments={'Path: A',}},
     waist="月虹帯+1",
     left_ear="ハーティーピアス",
@@ -412,14 +412,14 @@ function init_gear_sets()
     sets.engaged.Verethragna = {
     ammo={ name="コイストボダー", augments={'Path: A',}},
     head="乾闥婆陣鉢改",
-    body="乾闥婆作務衣改",
+    body="ムパカダブレット",
     hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     legs="ＢＫホーズ+2",
-    feet="ＢＫゲートル+2",
+    feet="ＢＫゲートル+3",
     neck={ name="モンクの喉輪+2", augments={'Path: A',}},
     waist="月虹帯+1",
     left_ear="シェリダピアス",
-    right_ear={ name="ビックピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Store TP"+3',}},
+    right_ear={ name="ビックピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','"Store TP"+5',}},
     left_ring="ゲリリング",
     right_ring="ニックマドゥリング",
     back={ name="セゴモマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','System: 1 ID: 640 Val: 4',}},
@@ -434,7 +434,7 @@ function init_gear_sets()
     body="ＢＫシクラス+3",
     hands="ＢＫグローブ+2",
     legs="ＢＫホーズ+2",
-    feet="ＢＫゲートル+2",
+    feet="ＢＫゲートル+3",
     neck={ name="アンムーヴカラー+1", augments={'Path: A',}},
     waist="月虹帯+1",
     left_ear="ハーティーピアス",
@@ -489,7 +489,7 @@ function init_gear_sets()
         head={ name="アデマボンネット+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
         body="乾闥婆作務衣改",
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-        legs="乾闥婆筒袴改",
+    legs="ＢＫホーズ+2",
         feet="乾闥婆脛当改",
         neck="モンクの喉輪+2",
         waist="月虹帯+1",
@@ -505,7 +505,7 @@ function init_gear_sets()
         head="マリグナスシャポー",
         body="マリグナスタバード",
         hands="マリグナスグローブ",
-        legs="マリグナスタイツ",
+    legs="ＢＫホーズ+2",
         feet="マリグナスブーツ",
         neck="モンクの喉輪+2",
         waist="月虹帯+1",
@@ -551,7 +551,7 @@ function customize_idle_set(idleSet)
     if state.Buff['ためる'] then
         idleSet = set_combine(idleSet, {waist="アスクサッシュ",}, {neck="ジャステシアトルク",}, { right_ring="スリョールリング",})
     elseif state.Buff['死の宣告'] then
-        idleSet = set_combine(idleSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        idleSet = set_combine(idleSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     end
 
     return idleSet
@@ -564,7 +564,7 @@ function customize_melee_set(meleeSet)
     if state.Buff['ためる'] then
         meleeSet = set_combine(meleeSet, {waist="アスクサッシュ",}, {neck="ジャステシアトルク",}, { right_ring="スリョールリング",})
     elseif state.Buff['死の宣告'] then
-        meleeSet = set_combine(meleeSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        meleeSet = set_combine(meleeSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     elseif state.Buff['睡眠'] then
         meleeSet = set_combine(meleeSet, {head="フレンジーサリット",})
     elseif state.Buff['猫足立ち'] then
@@ -574,7 +574,7 @@ function customize_melee_set(meleeSet)
             body="ＢＫシクラス+3",
             hands="ＢＫグローブ+2",
             legs="ＢＫホーズ+2",
-            feet="ＢＫゲートル+2",
+            feet="ＢＫゲートル+3",
             })
     end
     

@@ -1,7 +1,6 @@
 function get_sets()
     set_language('japanese')
 
-
     mote_include_version = 2
     include('Mote-Include.lua')
 end
@@ -174,7 +173,7 @@ function init_gear_sets()
     neck="フォシャゴルゲット",
     waist="フォシャベルト",
     left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear={ name="ハシシンピアス", augments={'System: 1 ID: 1676 Val: 0','Accuracy+10','Mag. Acc.+10',}},
+    right_ear={ name="ハシシンピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Dbl.Atk."+3',}},
     left_ring="イラブラットリング",
     right_ring={ name="メタモルリング+1", augments={'Path: A',}},
     back="ヴェスピッドマント",
@@ -289,7 +288,7 @@ function init_gear_sets()
         ammo="ストンチタスラム+1",
         head={ name="テルキネキャップ", augments={'Mag. Evasion+23','"Cure" potency +8%','Enh. Mag. eff. dur. +10',}},
         body="ピンガチュニック",
-        hands="ＨＳバズバンド+2",
+        hands="ＨＳバズバンド+3",
         legs="ギーヴトラウザ",
         feet={ name="ミディアムサボ", augments={'MP+45','MND+9','"Conserve MP"+5','"Cure" potency +4%',}},
         neck="ファライナロケット",
@@ -311,7 +310,7 @@ function init_gear_sets()
         ammo="ペムフレドタスラム",
         head="ＨＳカヴク+2",
         body="ＨＳミンタン+3",
-        hands="ＨＳバズバンド+2",
+        hands="ＨＳバズバンド+3",
         legs="ＨＳタイト+2",
         feet="ＨＳバシュマク+2",
         neck="ミラージストール+2",
@@ -327,7 +326,7 @@ function init_gear_sets()
     ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
         head="ＨＳカヴク+2",
         body="ＨＳミンタン+3",
-        hands="ＨＳバズバンド+2",
+        hands="ＨＳバズバンド+3",
         legs="ＨＳタイト+2",
         feet="ＨＳバシュマク+2",
     neck="サンクトネックレス",
@@ -343,7 +342,7 @@ function init_gear_sets()
     ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
         head="ＨＳカヴク+2",
         body="ＨＳミンタン+3",
-        hands="ＨＳバズバンド+2",
+        hands="ＨＳバズバンド+3",
         legs="ＨＳタイト+2",
         feet="ＨＳバシュマク+2",
     neck="サンクトネックレス",
@@ -359,7 +358,7 @@ function init_gear_sets()
     ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
     head="妖蟲の髪飾り+1",
         body="ＨＳミンタン+3",
-        hands="ＨＳバズバンド+2",
+        hands="ＨＳバズバンド+3",
         legs="ＨＳタイト+2",
         feet="ＨＳバシュマク+2",
     neck="サンクトネックレス",
@@ -375,13 +374,13 @@ function init_gear_sets()
     ammo="マーヴィタスラム",
     head="ＨＳカヴク+2",
     body="ＡＳジュバ+3",
-    hands="ＨＳバズバンド+2",
+    hands="ＨＳバズバンド+3",
     legs="ＨＳタイト+2",
     feet={ name="ＬＬチャルク+1", augments={'Enhances "Diffusion" effect',}},
     neck="ロリケートトルク+1",
     waist="キャリアーサッシュ",
     left_ear="ハーティーピアス",
-    right_ear={ name="ハシシンピアス", augments={'System: 1 ID: 1676 Val: 0','Accuracy+10','Mag. Acc.+10',}},
+    right_ear={ name="ハシシンピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Dbl.Atk."+3',}},
     left_ring="守りの指輪",
     right_ring="スティキニリング",
     back={ name="コンフラワーケープ", augments={'MP+21','DEX+3','Accuracy+3','Blue Magic skill +10',}},
@@ -398,7 +397,7 @@ function init_gear_sets()
     sets.midcast['青魔法'].Refresh = sets.midcast.refresh
     sets.midcast['青魔法'].MagicDrk = sets.midcast.magic_drk
     sets.midcast['青魔法'].Enmity = sets.EnmityBoost
-    sets.midcast['青魔法'].MagicEarth = set_combine(sets.midcast.magic, {hands="ＨＳバズバンド+2", neck="クアンプネックレス",})
+    sets.midcast['青魔法'].MagicEarth = set_combine(sets.midcast.magic, {hands="ＨＳバズバンド+3", neck="クアンプネックレス",})
 
     sets.midcast['ディフュージョン'] = {feet={ name="ＬＬチャルク+1", augments={'Enhances "Diffusion" effect',}},}
     sets.midcast['エフラックス'] = {legs="ＨＳタイト+2",}
@@ -407,13 +406,13 @@ function init_gear_sets()
     ammo="昏黄の礫",
     head="ローハイドマスク",
     body="ＨＳミンタン+3",
-    hands="ＨＳバズバンド+2",
+    hands="ＨＳバズバンド+3",
     legs="ＨＳタイト+2",
     feet={ name="ヘルクリアブーツ", augments={'CHR+5','"Dbl.Atk."+1','"Refresh"+1','Accuracy+17 Attack+17','Mag. Acc.+10 "Mag.Atk.Bns."+10',}},
     neck="シビルスカーフ",
     waist="キャリアーサッシュ",
     left_ear="ハーティーピアス",
-    right_ear={ name="ハシシンピアス", augments={'System: 1 ID: 1676 Val: 0','Accuracy+10','Mag. Acc.+10',}},
+    right_ear={ name="ハシシンピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Dbl.Atk."+3',}},
     left_ring="守りの指輪",
     right_ring="ＷＬリング+1",
     back={ name="ロスメルタケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Regen"+5',}},
@@ -444,8 +443,8 @@ function init_gear_sets()
     feet="マリグナスブーツ",
     neck="アスパーネックレス",
     waist={ name="セールフィベルト+1", augments={'Path: A',}},
-    left_ear="ブランデシュピアス",
-    right_ear="ブレードボンピアス",
+    left_ear="エテオレートピアス",
+    right_ear={ name="ハシシンピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','"Dbl.Atk."+3',}},
     left_ring="イラブラットリング",
     right_ring="エポナリング",
     back={ name="ロスメルタケープ", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Mag.Atk.Bns."+10','"Regen"+5',}},
@@ -455,7 +454,7 @@ function init_gear_sets()
     ammo="マーヴィタスラム",
         head="ＨＳカヴク+2",
         body="ＨＳミンタン+3",
-        hands="ＨＳバズバンド+2",
+        hands="ＨＳバズバンド+3",
         legs="ＨＳタイト+2",
         feet="ＨＳバシュマク+2",
     neck="アスパーネックレス",

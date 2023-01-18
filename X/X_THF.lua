@@ -80,7 +80,7 @@ function init_gear_sets()
     sets.weapons = {}
     sets.weapons.Gandring = { main={name="ガンドリング"}, sub={ name="トゥワシュトラ"}}
     sets.weapons.Twashtar = { main={name="トゥワシュトラ"}, sub={ name="ターニオンダガー+1"}}
-    sets.weapons.Tauret = { main={name="トーレット"}, sub={ name="サンダン"}}
+    sets.weapons.Tauret = { main={name="トーレット"}, sub={ name="ターニオンダガー+1"}}
     sets.weapons.Centovente = { main={name="トーレット"}, sub={ name="マレヴォレンス"}}
 
     sets.TreasureHunter = {
@@ -165,8 +165,8 @@ function init_gear_sets()
     neck="フォシャゴルゲット",
         waist="フォシャベルト",
     left_ear="オドルピアス",
-    right_ear="シェリダピアス",
-    left_ring="ゲリリング",
+    left_ear="シェリダピアス",
+    right_ear={ name="スカルカピアス", augments={'System: 1 ID: 1676 Val: 0','Accuracy+10','Mag. Acc.+10',}},
     right_ring="ラジャスリング",
     back="サクロマント",
     }
@@ -256,13 +256,13 @@ function init_gear_sets()
     range="ウィングカッター+1",
     head="マリグナスシャポー",
     body="マリグナスタバード",
-    hands={ name="ＰＤアムレット+1", augments={'Enhances "Perfect Dodge" effect',}},
+    hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     legs="メガナダショウス+2",
-    feet="マリグナスブーツ",
+    feet="ＳＫプーレーヌ+3",
     neck="エルデションレンズ",
-    waist="チャークベルト",
-    left_ear="オドルピアス",
-    right_ear="シェリダピアス",
+    waist={ name="セールフィベルト+1", augments={'Path: A',}},
+    left_ear="シェリダピアス",
+    right_ear={ name="スカルカピアス", augments={'System: 1 ID: 1676 Val: 0','Accuracy+10','Mag. Acc.+10',}},
     left_ring="ゲリリング",
     right_ring="エポナリング",
     back="サクロマント",
@@ -317,7 +317,7 @@ function customize_idle_set(idleSet)
     end
     idleSet = set_combine(idleSet, weapon)
     if state.Buff['死の宣告'] then
-        idleSet = set_combine(idleSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        idleSet = set_combine(idleSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     end
     return idleSet
 end
@@ -330,7 +330,7 @@ function customize_melee_set(meleeSet)
     end
     meleeSet = set_combine(meleeSet, weapon)
     if state.Buff['死の宣告'] then
-        meleeSet = set_combine(meleeSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        meleeSet = set_combine(meleeSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     elseif state.Buff['睡眠'] then
         meleeSet = set_combine(meleeSet, {head="フレンジーサリット",})
     else
@@ -355,13 +355,20 @@ function job_self_command(cmdParams, eventArgs)
     local get = 'get'
     local put = 'put'
     local name = 'ガーゴイルの欠片'
+    local name2 = '風の塊'
     local sack = 'sack'
     if cmdParams[1] == 'get' then
         itemizer_command = itemizer_command..get..' '..name..' '..sack..' all ;' 
         send_command(itemizer_command)
+    elseif cmdParams[1] == 'get2' then
+        itemizer_command = itemizer_command..get..' '..name2..' '..sack..' all ;' 
+        send_command(itemizer_command)
     end
     if cmdParams[1] == 'sack' then
         itemizer_command = itemizer_command..put..' '..name..' '..sack..' all ;'
+        send_command(itemizer_command)
+    elseif cmdParams[1] == 'sack2' then
+        itemizer_command = itemizer_command..put..' '..name2..' '..sack..' all ;'
         send_command(itemizer_command)
     end
 end

@@ -90,7 +90,7 @@ function init_gear_sets()
     sets.TreasureHunter = {
     main=empty,
     sub=empty,
-        ammo="完璧な幸運の卵",
+--        ammo="完璧な幸運の卵",
         hands={ name="ＰＤアムレット+3", augments={'Enhances "Perfect Dodge" effect',}},
         waist="チャークベルト",
     }
@@ -117,7 +117,7 @@ function init_gear_sets()
     }
 
     sets.precast.WS = { -- Multi
-        ammo="パルーグストーン",
+--        ammo="パルーグストーン",
     head={ name="アデマボンネット+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
         body="ＰＬベスト+3",
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
@@ -133,12 +133,12 @@ function init_gear_sets()
     }
 
     sets.precast.WS.wsd = {
-    ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
+--    ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
     head="ＰＬボンネット+3",
     body="ＰＬベスト+3",
     hands="メガナダグローブ+2",
     legs={ name="ＰＤキュロット+2", augments={'Enhances "Feint" effect',}},
-    feet="ＳＫプーレーヌ+1",
+    feet="ＳＫプーレーヌ+3",
     neck="サンクトネックレス",
     waist="チャークベルト",
     left_ear="フリオミシピアス",
@@ -149,7 +149,7 @@ function init_gear_sets()
     }
     
     sets.precast.WS.sata = {
-    ammo="パルーグストーン",
+--    ammo="パルーグストーン",
     head="ＰＬボンネット+3",
     body="メガナダクウィリ+1",
     hands="メガナダグローブ+2",
@@ -165,7 +165,7 @@ function init_gear_sets()
     }
     
     sets.precast.WS.critical = {
-    ammo="イェットシーラ+1",
+--    ammo="イェットシーラ+1",
     head={ name="ブリスタサリット+1", augments={'Path: A',}},
     body="グレティキュイラス",
     hands="グレティガントレ",
@@ -181,7 +181,7 @@ function init_gear_sets()
     }
 
     sets.precast.WS.magic = {
-        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
+--        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
         head={ name="ニャメヘルム", augments={'Path: B',}},
         body={ name="ニャメメイル", augments={'Path: B',}},
         hands={ name="ニャメガントレ", augments={'Path: B',}},
@@ -246,40 +246,40 @@ function init_gear_sets()
     }
 
     sets.idle = {
-    ammo="昏黄の礫",
+    range={ name="アンチテイル+1", augments={'Path: A',}},
     head="マリグナスシャポー",
     body="グレティキュイラス",
     hands="グレティガントレ",
     legs="グレティブリーチズ",
     feet="グレティブーツ",
     neck="サンクトネックレス",
-    waist="ギシドゥバサッシュ",
+    waist="キャリアーサッシュ",
     left_ear="エアバニピアス",
-    right_ear="オノワイヤリング",
+    right_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
     left_ring="守りの指輪",
     right_ring="月明の指輪",
     back="月明の羽衣",
     }
 
     sets.engaged = {
-    ammo="完璧な幸運の卵",
+    range={ name="アンチテイル+1", augments={'Path: A',}},
     head={ name="アデマボンネット+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     body="ＰＬベスト+3",
-    hands={ name="ＰＤアムレット+3", augments={'Enhances "Perfect Dodge" effect',}},
+    hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     legs="ＰＬキュロット+3",
-    feet={ name="ＰＤプーレーヌ+3", augments={'Enhances "Assassin\'s Charge" effect',}},
+    feet="ＳＫプーレーヌ+3",
     neck="エルデションレンズ",
     waist={ name="セールフィベルト+1", augments={'Path: A',}},
     left_ear="シェリダピアス",
-    right_ear="オドルピアス",
+    right_ear={ name="スカルカピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','"Store TP"+4',}},
     left_ring="ゲリリング",
     right_ring="エポナリング",
-    back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
+    back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}},
     }
     sets.engaged.TH = set_combine(sets.engaged, sets.TreasureHunter)
 
     sets.engaged.DT = {
-    ammo="完璧な幸運の卵",
+    range={ name="アンチテイル+1", augments={'Path: A',}},
     head="マリグナスシャポー",
     body="グレティキュイラス",
     hands={ name="ＰＤアムレット+3", augments={'Enhances "Perfect Dodge" effect',}},
@@ -327,7 +327,7 @@ function customize_idle_set(idleSet)
     end
     idleSet = set_combine(idleSet, weapon)
     if state.Buff['死の宣告'] then
-        idleSet = set_combine(idleSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        idleSet = set_combine(idleSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     end
     return idleSet
 end
@@ -340,7 +340,7 @@ function customize_melee_set(meleeSet)
     end
     meleeSet = set_combine(meleeSet, weapon)
     if state.Buff['死の宣告'] then
-        meleeSet = set_combine(meleeSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        meleeSet = set_combine(meleeSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     elseif state.Buff['睡眠'] then
         meleeSet = set_combine(meleeSet, {head="フレンジーサリット",})
     end
@@ -363,16 +363,24 @@ function job_self_command(cmdParams, eventArgs)
     local get = 'get'
     local put = 'put'
     local name = 'ガーゴイルの欠片'
+    local name2 = '風の塊'
     local sack = 'sack'
     if cmdParams[1] == 'get' then
         itemizer_command = itemizer_command..get..' '..name..' '..sack..' all ;' 
+        send_command(itemizer_command)
+    elseif cmdParams[1] == 'get2' then
+        itemizer_command = itemizer_command..get..' '..name2..' '..sack..' all ;' 
         send_command(itemizer_command)
     end
     if cmdParams[1] == 'sack' then
         itemizer_command = itemizer_command..put..' '..name..' '..sack..' all ;'
         send_command(itemizer_command)
+    elseif cmdParams[1] == 'sack2' then
+        itemizer_command = itemizer_command..put..' '..name2..' '..sack..' all ;'
+        send_command(itemizer_command)
     end
 end
+
 
 function job_sub_job_change(newSubjob, oldSubjob)
     set_equip_by_sub_job(newSubjob)

@@ -209,7 +209,7 @@ function init_gear_sets()
         right_ear="プラティクピアス",
     }
     
-    sets.precast.JA['オーバードライヴ'] = {body={ name="ＰＩトベ+3", augments={'Enhances "Overdrive" effect',}},}
+    sets.precast.JA['オーバードライヴ'] = {body={ name="ＰＩトベ+2", augments={'Enhances "Overdrive" effect',}},}
     sets.precast.JA['腹話術'] = {legs={ name="ＰＩチュリダル+3", augments={'Enhances "Ventriloquy" effect',}},}
     sets.precast.JA['黒衣チェンジ'] = {feet={ name="ＰＩバブーシュ+3", augments={'Enhances "Role Reversal" effect',}},}
 
@@ -270,8 +270,8 @@ function init_gear_sets()
 
     sets.engaged = {
     head="タリアターバン+2",
-    body={ name="ＰＩトベ+1", augments={'Enhances "Overdrive" effect',}},
-    hands="ＫＧグアンティ+2",
+    body={ name="ＰＩトベ+2", augments={'Enhances "Overdrive" effect',}},
+    hands="ＫＧグアンティ+3",
     legs={ name="ヘルクリアトラウザ", augments={'Pet: Mag. Acc.+4','Pet: "Store TP"+11','Pet: STR+8','Pet: Attack+10 Pet: Rng.Atk.+10',}},
     feet="ムパカブーツ",
     neck="シュルマヌカラー",
@@ -288,7 +288,7 @@ function init_gear_sets()
     sets.engaged.Critical = {
     head="ＫＧカペッロ+2",
     body="ＫＧファルセト+2",
-    hands="ＫＧグアンティ+2",
+    hands="ＫＧグアンティ+3",
     legs="ＫＧパンタロニ+2",
     feet="ＫＧスカルペ+2",
     neck="シュルマヌカラー",
@@ -320,7 +320,7 @@ function init_gear_sets()
 
     sets.idle.Pet.Engaged = {
     head="タリアターバン+2",
-    body={ name="ＰＩトベ+1", augments={'Enhances "Overdrive" effect',}},
+    body={ name="ＰＩトベ+2", augments={'Enhances "Overdrive" effect',}},
     hands={ name="テーオングローブ", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Haste+5',}},
     legs={ name="ヘルクリアトラウザ", augments={'Pet: Mag. Acc.+4','Pet: "Store TP"+11','Pet: STR+8','Pet: Attack+10 Pet: Rng.Atk.+10',}},
     feet={ name="ヘルクリアブーツ", augments={'Pet: Accuracy+26 Pet: Rng. Acc.+26','Pet: "Store TP"+8','Pet: DEX+8','Pet: "Mag.Atk.Bns."+5',}},
@@ -424,7 +424,7 @@ function init_gear_sets()
 
     sets.idle.Pet.Engaged.Melee.Stp =  {
     head="タリアターバン+2",
-    body={ name="ＰＩトベ+1", augments={'Enhances "Overdrive" effect',}},
+    body={ name="ＰＩトベ+2", augments={'Enhances "Overdrive" effect',}},
     hands={ name="テーオングローブ", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Haste+5',}},
     legs={ name="ヘルクリアトラウザ", augments={'Pet: Mag. Acc.+4','Pet: "Store TP"+11','Pet: STR+8','Pet: Attack+10 Pet: Rng.Atk.+10',}},
     feet={ name="ヘルクリアブーツ", augments={'Pet: Accuracy+26 Pet: Rng. Acc.+26','Pet: "Store TP"+8','Pet: DEX+8','Pet: "Mag.Atk.Bns."+5',}},
@@ -487,7 +487,7 @@ function customize_idle_set(idleSet)
         idleSet = set_combine(idleSet, weapons[state.Weapons.value], sets.animator[state.Animator.value], {
     head="ＫＧカペッロ+2",
     body="ＫＧファルセト+2",
-    hands="ＫＧグアンティ+2",
+    hands="ＫＧグアンティ+3",
     legs="ＫＧパンタロニ+2",
     feet="ムパカブーツ",
     neck="シュルマヌカラー",
@@ -512,7 +512,7 @@ function customize_melee_set(meleeSet)
         meleeSet = set_combine(idleSet, weapons[state.Weapons.value], sets.animator[state.Animator.value], {
     head="ＫＧカペッロ+2",
     body="ＫＧファルセト+2",
-    hands="ＫＧグアンティ+2",
+    hands="ＫＧグアンティ+3",
     legs="ＫＧパンタロニ+2",
     feet="ムパカブーツ",
     neck="シュルマヌカラー",

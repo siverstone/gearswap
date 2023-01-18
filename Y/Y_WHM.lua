@@ -213,7 +213,7 @@ function get_sets()
     
     sets.midcast.magic_acc = {
         head="ＴＥキャップ+2",
-        body="ＴＥブリオー+2",
+        body="ＴＥブリオー+3",
         hands="ＰＩミトン+3",
         legs={ name="カイロンホーズ", augments={'Mag. Acc.+30','"Fast Cast"+4','MND+15','"Mag.Atk.Bns."+6',}},
         feet="ＴＥダックビル+3",
@@ -237,7 +237,7 @@ function get_sets()
     feet="ＥＢダックビル+2",
         neck="シビルスカーフ",
     waist="キャリアーサッシュ",
-    left_ear="ハーティーピアス",
+    left_ear="エテオレートピアス",
     right_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
     left_ring="守りの指輪",
     right_ring="ＷＬリング+1",
@@ -324,9 +324,9 @@ function midcast(spell)
     
     if string.find(spell.name, 'ケアルガ') or string.find(spell.name, 'ケアルラ')then
         if buffactive['極光の陣'] or buffactive['極光の陣II'] then
-            set_equip = set_combine(sets.midcast.cure, {body="ＴＥブリオー+2", waist="光輪の帯"})
+            set_equip = set_combine(sets.midcast.cure, {body="ＴＥブリオー+3", waist="光輪の帯"})
         else
-            set_equip = set_combine(sets.midcast.cure, {body="ＴＥブリオー+2",})
+            set_equip = set_combine(sets.midcast.cure, {body="ＴＥブリオー+3",})
         end
     elseif string.find(spell.name, 'ケアル') or spell.name == 'フルケア' then
         if buffactive['極光の陣'] or buffactive['極光の陣II'] then

@@ -3,7 +3,7 @@ include('simple_auto')
 
 function init_auto_mode()
     state.AutoMode = M{['description']='Auto Mode', 'Off', 'Setup', 'Engage'}
-    state.AutoRune = M{['description']='Auto Rune', 'テネブレイ', 'イグニス', 'ゲールス', 'フラブラ', 'テッルス', 'スルポール', 'ウンダ', 'ルックス'}
+    state.AutoRune = M{['description']='Auto Rune', 'ルックス', 'イグニス', 'ゲールス', 'フラブラ', 'テッルス', 'スルポール', 'ウンダ','テネブレイ' }
     state.AutoWS = M(false, "Auto WS")
 end
 
@@ -21,8 +21,8 @@ function simple_tick()
         if player.status ~= 'Engaged' then return false end
         if check_majesty() then return true end
         if check_rune() then return true end
-        if not moving and check_enmity() then return true end
         if check_ability_buff() then return true end
+        if not moving and check_enmity() then return true end
         if not moving and check_spell_buff() then return true end
         if state.AutoWS.current == 'on' then
             if check_ws() then return true end
@@ -97,14 +97,14 @@ local enmity_lists = {
     {name='パリセード', id=42, pf='/ja', t='me'},
     {name='ランパート', id=77, pf='/ja', t='me'},
     {name='シールドバッシュ', id=73, pf='/ja', t='t'},
-    {name='フラッシュ', id=112, pf='/ma', t='t'},
+--    {name='フラッシュ', id=112, pf='/ma', t='t'},
 --    {name='バニシュガ', id=38, pf='/ma', t='t'},
 }
 
 local sub_job_enmity_lists = {
     {name='挑発', id=5, pf='/ja', t='t', job='戦'},
     {name='フルーグ', id=59, pf='/ja', t='me', job='剣'},
---    {name='フォイル', id=840, pf='/ma', t='me', job='剣'},
+    {name='フォイル', id=840, pf='/ma', t='me', job='剣'},
     {name='ソ\\ードプレイ', id=24, pf='/ja', t='me', job='剣'},
     {name='ブランクゲイズ', id=592, pf='/ma', t='t', job='青'},
     {name='ジェタチュラ', id=575, pf='/ma', t='t', job='青'},
@@ -195,7 +195,7 @@ function check_ability_buff()
     end
 
     for i, v in pairs(ability_buff_lists) do
-        if player.mp < 200 and player.tp > 2500 and recasts[v.id] == 0 then
+        if player.mp < 200 and recasts[v.id] == 0 then
             windower.chat.input('/ja "'..windower.to_shift_jis(v.name) ..'" <me>')
             tickdelay = os.clock() + 2
             return true
@@ -277,13 +277,13 @@ function check_spell_buff()
     return false
 end
 
-local use_ws = 'ロイエ'
---local use_ws = 'イオリアンエッジ'
+--local use_ws = 'ロイエ'
+local use_ws = 'イオリアンエッジ'
 --local use_ws = 'サークルブレード'
 function check_ws()
     if not check_can_use_ability() then return false end
-    if buffactive['アフターマス:Lv3'] then
---if not buffactive['アフターマス:Lv3'] then
+--    if buffactive['アフターマス:Lv3'] then
+if not buffactive['アフターマス:Lv3'] then
         if player.tp >= 1000 then
             windower.chat.input('/ws "'..windower.to_shift_jis(use_ws) ..'" <t>')
             tickdelay = os.clock() + 5

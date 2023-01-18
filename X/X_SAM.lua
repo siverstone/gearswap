@@ -118,53 +118,50 @@ function init_gear_sets()
 
     sets.precast.WS = { -- Multi
     ammo="ノブキエリ",
-    head="フラマツッケット+2",
-    body="乾闥婆作務衣改",
-    hands="極脇戸筒篭手",
-    legs="ムパカホーズ",
-        feet={ name="ニャメソルレット", augments={'Path: B',}},
+    head="ムパカキャップ",
+    body="真春日胴丸",
+    hands="真春日筒篭手",
+    legs="真脇戸板佩楯",
+    feet="ニャメソルレット",
     neck="フォシャゴルゲット",
     waist={ name="セールフィベルト+1", augments={'Path: A',}},
-        -- left_ear="シェレピアス",
-        left_ear="スラッドピアス",
-    right_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-    left_ring="ニックマドゥリング",
-    right_ring="ペトロフリング",
-    back={ name="スメルトリオマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="スラッドピアス",
+    left_ring="ラジャスリング",
+    right_ring="ニックマドゥリング",
+    back={ name="スメルトリオマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
 
     sets.precast.WS.multi_acc = {
-        ammo="ノブキエリ",
-        head="フラマツッケット+2",
-        body="乾闥婆作務衣改",
-        hands="フラママノポラ+2",
-        legs="乾闥婆筒袴改",
-        feet="フラマガンビエラ+2",
-        neck="フォシャゴルゲット",
-        waist={ name="セールフィベルト+1", augments={'Path: A',}},
-        -- waist={ name="ケンタークベルト+1", augments={'Path: A',}},
-        left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear="スラッドピアス",
-        left_ring="王将の指輪",
-        right_ring="ニックマドゥリング",
-        back={ name="スメルトリオマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
+    ammo="ノブキエリ",
+    head="ムパカキャップ",
+    body="真春日胴丸",
+    hands="真春日筒篭手",
+    legs="真脇戸板佩楯",
+    feet="ニャメソルレット",
+    neck="フォシャゴルゲット",
+    waist={ name="セールフィベルト+1", augments={'Path: A',}},
+    left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="スラッドピアス",
+    left_ring="ラジャスリング",
+    right_ring="ニックマドゥリング",
+    back={ name="スメルトリオマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
 
     sets.precast.WS.wsd = {
-        ammo="ノブキエリ",
-        head="ムパカキャップ",
-        body={ name="極左近士胴丸", augments={'Enhances "Overwhelm" effect',}},
-        hands={ name="ニャメガントレ", augments={'Path: B',}},
-        legs="極脇戸板佩楯",
-        feet={ name="ニャメソルレット", augments={'Path: B',}},
-        neck="フォシャゴルゲット",
-        -- waist={ name="セールフィベルト+1", augments={'Path: A',}},
-        waist={ name="ケンタークベルト+1", augments={'Path: A',}},
-        left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear="スラッドピアス",
-        left_ring="王将の指輪",
-        right_ring="ニックマドゥリング",
-        back={ name="スメルトリオマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    ammo="ノブキエリ",
+    head="ムパカキャップ",
+    body="真春日胴丸",
+    hands="真春日筒篭手",
+    legs="真脇戸板佩楯",
+    feet="ニャメソルレット",
+    neck="フォシャゴルゲット",
+    waist={ name="セールフィベルト+1", augments={'Path: A',}},
+    left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
+    right_ear="スラッドピアス",
+    left_ring="ラジャスリング",
+    right_ring="ニックマドゥリング",
+    back={ name="スメルトリオマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
 
     
@@ -262,16 +259,16 @@ function init_gear_sets()
 
     sets.idle = {
     sub="ウトゥグリップ",
-    ammo="昏黄の礫",
-    head="ニャメヘルム",
-    body="ニャメメイル",
+    ammo="ストンチタスラム+1",
+    head="真脇戸桃形兜",
+    body="サクロブレスト",
     hands="ニャメガントレ",
-    legs="ニャメフランチャ",
+    legs="真春日板佩楯",
     feet="ニャメソルレット",
-    neck="サンクトネックレス",
-    waist="ギシドゥバサッシュ",
-    left_ear="シェレピアス",
-    right_ear="ブルタルピアス",
+    neck="上級近衛騎士カラー",
+    waist="キャリアーサッシュ",
+    left_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
+    right_ear="トゥイストピアス",
     left_ring="守りの指輪",
     right_ring="ＶＣリング+1",
     back={ name="スメルトリオマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -280,15 +277,15 @@ function init_gear_sets()
     sets.engaged = {
     sub="ウトゥグリップ",
     ammo={ name="コイストボダー", augments={'Path: A',}},
-    head="フラマツッケット+2",
-    body="ムパカダブレット",
+    head="真春日烏帽子形兜",
+    body="真春日胴丸",
     hands="極脇戸筒篭手",
-    legs="ムパカホーズ",
+    legs="真春日板佩楯",
     feet="乾闥婆脛当改",
     neck="月光の喉輪",
     waist={ name="セールフィベルト+1", augments={'Path: A',}},
-    left_ear="シェレピアス",
-    right_ear="ブルタルピアス",
+    left_ear={ name="シェレピアス", augments={'Path: A',}},
+    right_ear={ name="春日耳飾り", augments={'System: 1 ID: 1676 Val: 0','Accuracy+10','Mag. Acc.+10',}},
     left_ring="シーリチリング+1",
     right_ring="ニックマドゥリング",
     back={ name="スメルトリオマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -329,7 +326,7 @@ function customize_idle_set(idleSet)
     idleSet = set_combine(idleSet, weapons[state.Weapons.value], {sub=get_melee_set().sub})
 
     if state.Buff['死の宣告'] then
-        idleSet = set_combine(idleSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        idleSet = set_combine(idleSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     end
     return idleSet
 end
@@ -339,7 +336,7 @@ function customize_melee_set(meleeSet)
     meleeSet = set_combine(meleeSet, weapons[state.Weapons.value])
 
     if state.Buff['死の宣告'] then
-        meleeSet = set_combine(meleeSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        meleeSet = set_combine(meleeSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     elseif state.Buff['睡眠'] then
         meleeSet = set_combine(meleeSet, {head="フレンジーサリット",})
     end

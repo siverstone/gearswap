@@ -133,6 +133,9 @@ local sub_job_spell_lists = {
         {name='オカルテーション', buff='ブリンク', id=679, job='黒' , overwrite=0},
         {name='アイススパイク', buff='アイススパイク', id=250, job='黒' , overwrite=0},
 --        {name='N.メディテイト', buff='攻撃力アップ', id=700, job='黒' , overwrite=30},
+        {name='エラチックフラッター', buff='ヘイスト', id=710, job='学' , overwrite=30},
+        {name='オカルテーション', buff='ブリンク', id=679, job='学' , overwrite=0},
+        {name='ストンスキン', buff='ストンスキン', id=54, job='学' , overwrite=0},
 }
 function check_spell_buff()
     if not check_can_use_magic() then return false end

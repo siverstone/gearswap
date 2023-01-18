@@ -247,10 +247,10 @@ function check_spell_buff()
 end
 
 local use_ws = {
---    [1] = 'エヴィサレーション',
+    [1] = 'エヴィサレーション',
 --    [2] = 'ルドラストーム',
 --    [3] = 'エヴィサレーション',
-      [1] = 'イオリアンエッジ',
+--      [1] = 'イオリアンエッジ',
 }
 local ws_index = 1
 local ws_target_id = 0

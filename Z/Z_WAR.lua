@@ -6,6 +6,9 @@ function get_sets()
 end
 
 function job_setup()
+    state.Buff['死の宣告'] = buffactive['死の宣告'] or false
+    state.Buff['睡眠'] = buffactive['睡眠'] or false
+
     include('Mote-TreasureHunter')
     include('Mote-Display')
 
@@ -106,7 +109,7 @@ function init_gear_sets()
 
     sets.precast.WS = { -- Multi
         ammo="ノブキエリ",
-        head={ name="ＡＧマスク+1", augments={'Enhances "Savagery" effect',}},
+        head={ name="ＡＧマスク+3", augments={'Enhances "Savagery" effect',}},
         body="ＰＭロリカ+3",
         hands="サクパタガントレ",
         legs="サクパタクウィス",
@@ -122,7 +125,7 @@ function init_gear_sets()
 
     sets.precast.WS.vit = {
         ammo="ノブキエリ",
-        head={ name="ＡＧマスク+1", augments={'Enhances "Savagery" effect',}},
+        head={ name="ＡＧマスク+3", augments={'Enhances "Savagery" effect',}},
         body="ＰＭロリカ+3",
         hands="サクパタガントレ",
         legs="サクパタクウィス",
@@ -138,7 +141,7 @@ function init_gear_sets()
     
     sets.precast.WS.str = {
         ammo="ノブキエリ",
-        head={ name="ＡＧマスク+1", augments={'Enhances "Savagery" effect',}},
+        head={ name="ＡＧマスク+3", augments={'Enhances "Savagery" effect',}},
         body="ＰＭロリカ+3",
         hands="サクパタガントレ",
         legs="サクパタクウィス",
@@ -161,27 +164,27 @@ function init_gear_sets()
         feet="サクパタレギンス",
         neck={ name="戦士の数珠+1", augments={'Path: A',}},
         waist={ name="セールフィベルト+1", augments={'Path: A',}},
-        left_ear="スラッドピアス",
-        right_ear="シェレピアス",
+        left_ear="シェレピアス",
+        right_ear="スラッドピアス",
         left_ring="ニックマドゥリング",
         right_ring="王将の指輪",
         back={ name="シコルマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
     }
     
     sets.precast.WS.str_sword = {
-        ammo="ノブキエリ",
-    head="サクパタヘルム",
-        body="ＰＭロリカ+3",
-    hands="サクパタガントレ",
-    legs="サクパタクウィス",
+    ammo="ノブキエリ",
+    head={ name="ＡＧマスク+3", augments={'Enhances "Savagery" effect',}},
+    body="ＰＭロリカ+3",
+    hands="ＢＩマフラ+2",
+    legs="ＢＩクウィス+2",
     feet="スレビアレギンス+2",
-    neck={ name="戦士の数珠+1", augments={'Path: A',}},
-    waist={ name="セールフィベルト+1", augments={'Path: A',}},
+    neck="フォシャゴルゲット",
+    waist="フォシャベルト",
     left_ear="スラッドピアス",
     right_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="ニックマドゥリング",
-    right_ring="ラジャスリング",
-    back={ name="シコルマント", augments={'STR+20','Accuracy+20 Attack+20','STR+6','Weapon skill damage +10%',}},
+    right_ring="エパミノダスリング",
+    back={ name="シコルマント", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
     }
     
     sets.precast.WS.magic_acc = {
@@ -236,20 +239,20 @@ function init_gear_sets()
 
     sets.precast.JA['バーサク'] = {
         body="ＰＭロリカ+3",
-        feet={ name="ＡＧカリガ+1", augments={'Enhances "Tomahawk" effect',}},
+        feet={ name="ＡＧカリガ+3", augments={'Enhances "Tomahawk" effect',}},
         back={ name="シコルマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     }
-    sets.precast.JA['ディフェンダー'] = {hands={ name="ＡＧマフラ+1", augments={'Enhances "Mighty Strikes" effect',}},}
-    sets.precast.JA['アグレッサー'] = {head="ＰＭマスク+3", body={ name="ＡＧロリカ+1", augments={'Enhances "Aggressive Aim" effect',}},}
-    sets.precast.JA['ウォークライ'] = {head={ name="ＡＧマスク+1", augments={'Enhances "Savagery" effect',}},}
-    sets.precast.JA['ブラッドレイジ'] = {body="ＢＩロリカ+1",}
-    sets.precast.JA['トマホーク'] = {ammo="Ｔ．トマホーク", feet={ name="ＡＧカリガ+1", augments={'Enhances "Tomahawk" effect',}},}
-    sets.precast.JA['マイティストライク'] = {hands={ name="ＡＧマフラ+1", augments={'Enhances "Mighty Strikes" effect',}},}
+    sets.precast.JA['ディフェンダー'] = {hands={ name="ＡＧマフラ+3", augments={'Enhances "Mighty Strikes" effect',}},}
+    sets.precast.JA['アグレッサー'] = {head="ＰＭマスク+3", body={ name="ＡＧロリカ+3", augments={'Enhances "Aggressive Aim" effect',}},}
+    sets.precast.JA['ウォークライ'] = {head={ name="ＡＧマスク+3", augments={'Enhances "Savagery" effect',}},}
+    sets.precast.JA['ブラッドレイジ'] = {body="ＢＩロリカ+2",}
+    sets.precast.JA['トマホーク'] = {ammo="Ｔ．トマホーク", feet={ name="ＡＧカリガ+3", augments={'Enhances "Tomahawk" effect',}},}
+    sets.precast.JA['マイティストライク'] = {hands={ name="ＡＧマフラ+3", augments={'Enhances "Mighty Strikes" effect',}},}
     sets.precast.JA['挑発'] = {
         ammo="サピエンスオーブ",
         head="ハリタスヘルム",
         body="フロプトブレスト",
-        hands={ name="ＡＧマフラ+1", augments={'Enhances "Mighty Strikes" effect',}},
+        hands={ name="ＡＧマフラ+3", augments={'Enhances "Mighty Strikes" effect',}},
         legs="ＰＭクウィス+3",
         feet="サクパタレギンス",
         neck="月光の首飾り",
@@ -286,15 +289,15 @@ function init_gear_sets()
 
     sets.engaged = {
     ammo={ name="コイストボダー", augments={'Path: A',}},
-    head="サクパタヘルム",
-    body="サクパタブレスト",
+    head="ＢＩマスク+2",
+    body="ＢＩロリカ+2",
     hands="サクパタガントレ",
-    legs="サクパタクウィス",
-    feet="サクパタレギンス",
-        neck={ name="戦士の数珠+1", augments={'Path: A',}},
+    legs="ＢＩクウィス+2",
+    feet="ＢＩカリガ+2",
+    neck={ name="戦士の数珠+1", augments={'Path: A',}},
     waist="イオスケハベルト+1",
     left_ear="シェレピアス",
-    right_ear="ボイイピアス+1",
+    right_ear={ name="ボイイピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Crit.hit rate+3',}},
     left_ring="ニックマドゥリング",
     right_ring="シーリチリング+1",
     back={ name="シコルマント", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -339,12 +342,22 @@ end
 function customize_idle_set(idleSet)
     local weapons = sets.weapons
     idleSet = set_combine(idleSet, weapons[state.Weapons.value])
+
+    if state.Buff['死の宣告'] then
+        idleSet = set_combine(idleSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+    end
+
     return idleSet
 end
 
 function customize_melee_set(meleeSet)
     local weapons = sets.weapons
     meleeSet = set_combine(meleeSet, weapons[state.Weapons.value])
+
+    if state.Buff['死の宣告'] then
+        meleeSet = set_combine(meleeSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+    end
+
     return meleeSet
 end
 

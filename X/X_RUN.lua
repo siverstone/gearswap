@@ -109,12 +109,12 @@ function init_gear_sets()
         head={ name="ハリタスヘルム", hp=88,},
         body={ name="エメットハーネス+1", augments={'Path: A',}, hp=61,},
         hands={ name="クーリスグローブ", hp=25,},
-    legs={ name="ＥＲレグガード+2", hp=90,},
-    feet={ name="ＥＲグリーヴ+2", hp=38,},
-    neck="月明の首飾り",
+        legs={ name="ＥＲレグガード+3", hp=100,},
+        feet={ name="ＥＲグリーヴ+3", hp=48,},
+        neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
         waist={ name="トランスベルト", hp=14,},
         left_ear={ name="クリプティクピアス", hp=40,},
-    right_ear={ name="オノワイヤリング+1", augments={'Path: A',}, hp=110,},
+        right_ear={ name="オノワイヤリング+1", augments={'Path: A',}, hp=110,},
         left_ring="プロボカレリング",
         right_ring={ name="アイワツリング", hp=70,},
         back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Phys. dmg. taken-10%',}, hp=80,},
@@ -123,17 +123,17 @@ function init_gear_sets()
     sets.precast.FC = {
         ammo={ name="サピエンスオーブ", fc=0.02,},
         head={ name="ＲＮバンド+3", fc=0.14, hp=109,},
-        body={ name="ＥＲサーコート+2", fc=0.1, hp=133,},
+        body={ name="ＥＲサーコート+3", fc=0.13, hp=143,},
         hands={ name="レイライングローブ", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}, fc=0.08, hp=25,},
-    legs={ name="ＦＵトラウザ+2", augments={'Enhances "Inspire" effect',}, fc=0.14, hp=97,},
+    legs={ name="ＦＵトラウザ+3", augments={'Enhances "Inspire" effect',}, fc=0.15, hp=107,},
         feet={ name="カマイングリーヴ+1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}, fc=0.08, hp=95,},
-    neck={ name="ベーテルペンダント", fc=0.04,},
+    neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
         waist={ name="ジーゲルサッシュ", fc=0.08,},
     left_ear={ name="ロケイシャスピアス", fc=0.02,},
-        right_ear={ name="オノワイヤリング+1", augments={'Path: A',}, hp=110,},
-        left_ring={ name="ゼラチナスリング+1", augments={'Path: A',}, hp=110,},
-        right_ring={ name="キシャールリング", fc=0.04,},
-        back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Evasion+10','"Fast Cast"+10','Phys. dmg. taken-10%',}, fc=0.1, hp=60,},
+    right_ear={ name="オノワイヤリング+1", augments={'Path: A',}, hp=110,},
+        left_ring={ name="キシャールリング", fc=0.04,},
+        right_ring={ name="ゼラチナスリング+1", augments={'Path: A',}, hp=110,},
+        back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Fast Cast"+10','Phys. dmg. taken-10%',}, fc=0.1, hp=60,},
     }
 
     sets.precast.FC['ファストキャスト'] = {
@@ -150,8 +150,8 @@ function init_gear_sets()
     feet={ name="ヘルクリアブーツ", augments={'Accuracy+30','"Triple Atk."+3','AGI+7',}},
     neck="フォシャゴルゲット",
     waist="ケンタークベルト+1",
-    left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-    right_ear="シェリダピアス",
+    left_ear="シェリダピアス",
+    right_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring="ペトロフリング",
     right_ring="エポナリング",
     back={ name="ディバートケープ", augments={'Enmity+4','"Embolden"+15','"Dbl.Atk."+3','Damage taken-1%',}},
@@ -159,31 +159,31 @@ function init_gear_sets()
 
     sets.precast.WS.dex = {
         ammo="ノブキエリ",
-        head={ name="ニャメヘルム", hp=91},
-        body={ name="ニャメメイル", hp=136},
-        hands={ name="ニャメガントレ", hp=91},
-        legs={ name="ニャメフランチャ", hp=114},
-        feet={ name="ニャメソルレット", hp=68},
-        neck="フォシャゴルゲット",
+        head={ name="アヤモツッケット+2", hp=45},
+        body={ name="アヤモコラッツァ+2", hp=57},
+        hands={ name="アヤモマノポラ+2", hp=22},
+        legs={ name="アヤモコッシャレ+2", hp=45},
+        feet={ name="アヤモガンビエラ+2", hp=11},
+    neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
         waist="フォシャベルト",
-        left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear="シェリダピアス",
-        left_ring="守りの指輪",
-        right_ring={ name="イラブラットリング", hp=60,},
-        back={ name="オーグマケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+        left_ear={ name="クリプティクピアス", hp=40,},
+        right_ear={ name="オノワイヤリング+1", augments={'Path: A',}, hp=110,},
+    left_ring={ name="月明の指輪", hp=100,},
+        right_ring={ name="ゼラチナスリング+1", augments={'Path: A',}, hp=110,},
+        back={ name="オーグマケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     }
     
     sets.precast.WS.acc = {
         ammo="ヤメラング",
-    head={ name="ＥＲガレア+3", hp=111,},
-    body={ name="ＥＲサーコート+2", hp=133,},
+        head={ name="ＥＲガレア+3", hp=111,},
+        body={ name="ＥＲサーコート+3", hp=143,},
     hands={ name="ＥＲガントレ+2", hp=49,},
-    legs={ name="ＥＲレグガード+2", hp=90,},
-    feet={ name="ＥＲグリーヴ+2", hp=38,},
+        legs={ name="ＥＲレグガード+3", hp=100,},
+        feet={ name="ＥＲグリーヴ+3", hp=48,},
     neck="月明の首飾り",
         waist={ name="エスカンストーン", hp=20,},
-        left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-        right_ear="ディグニタリピアス",
+        left_ear="ディグニタリピアス",
+        right_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring={ name="月明の指輪", hp=100,},
         right_ring={ name="エタナリング", hp=60,},
         back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Phys. dmg. taken-10%',}, hp=80,},
@@ -205,34 +205,34 @@ function init_gear_sets()
         sets.EnmityBoost,
         {
             body={ name="ＲＮコート+3", hp=218,},
-            legs={ name="ＦＵトラウザ+2", augments={'Enhances "Inspire" effect',}, hp=97,},
+            legs={ name="ＦＵトラウザ+3", augments={'Enhances "Inspire" effect',}, hp=107,},
             back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Phys. dmg. taken-10%',}, hp=80,},
         })
     sets.precast.JA['ヴァリエンス'] = sets.precast.JA['ヴァレション']
-    sets.precast.JA['リエモン'] = set_combine(sets.precast.JA['ヴァレション'], {body={ name="ＦＵコート+2", augments={'Enhances "Elemental Sforzo" effect',}, hp=109,},})
+    sets.precast.JA['リエモン'] = set_combine(sets.precast.JA['ヴァレション'], {body={ name="ＦＵコート+3", augments={'Enhances "Elemental Sforzo" effect',}, hp=119,},})
     sets.precast.JA['エンボルド'] = {back={ name="ディバートケープ", augments={'Enmity+4','"Embolden"+15','"Dbl.Atk."+3','Damage taken-1%',}},}
     sets.precast.JA['ビベイシャス'] = {head={ name="ＥＲガレア+3", hp=111,}}
     sets.precast.JA['ガンビット'] = set_combine(sets.EnmityBoost, {hands={ name="ＲＮミトン+3", hp=85,}})
     sets.precast.JA['レイク'] = set_combine(sets.EnmityBoost, {feet={ name="ＦＵブーツ+1", augments={'Enhances "Rayke" effect',}, hp=13,}})
-    sets.precast.JA['バットゥタ'] = set_combine(sets.EnmityBoost, {head={ name="ＦＵバンド+2", augments={'Enhances "Battuta" effect',}, hp=46,}})
+    sets.precast.JA['バットゥタ'] = set_combine(sets.EnmityBoost, {head={ name="ＦＵバンド+3", augments={'Enhances "Battuta" effect',}, hp=56,}})
     sets.precast.JA['ワンフォアオール'] = {
-    ammo="ストンチタスラム",
-    head="ＲＮバンド+3",
-    body="ＲＮコート+3",
-    hands="ＲＮミトン+3",
-    legs={ name="カマインクウィス+1", augments={'HP+80','STR+12','INT+12',}},
-    feet={ name="カマイングリーヴ", augments={'HP+60','MP+60','Phys. dmg. taken -3',}},
+        ammo="ストンチタスラム+1",
+        head={ name="ＲＮバンド+3", hp=111,},
+        body={ name="ＲＮコート+3", hp=218,},
+        hands={ name="ＲＮミトン+3", hp=85,},
+        legs={ name="カマインクウィス+1", augments={'HP+80','STR+12','INT+12',}, hp=130,},
+        feet={ name="カマイングリーヴ+1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}, hp=95,},
         neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
-    waist="トランスベルト",
-    left_ear="トゥイストピアス",
-    right_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
+    waist={ name="エスカンストーン", hp=20,},
+    left_ear={ name="クリプティクピアス", hp=40,},
+        right_ear={ name="オノワイヤリング+1", augments={'Path: A',}, hp=110,},
     left_ring={ name="月明の指輪", hp=100,},
-    right_ring="エタナリング",
-    back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Parrying rate+5%',}},
+        right_ring={ name="ゼラチナスリング+1", augments={'Path: A',}, hp=110,},
+    back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Phys. dmg. taken-10%',}, hp=80,},
     }
-    sets.precast.JA['フルーグ'] = set_combine(sets.EnmityBoost, {feet={ name="ＲＮブーツ+1", hp=74,}})
+    sets.precast.JA['フルーグ'] = set_combine(sets.EnmityBoost, {feet={ name="ＲＮブーツ+2", hp=64,}})
     sets.precast.JA['ソードプレイ'] = sets.EnmityBoost
-    sets.precast.JA['E.スフォルツォ'] = set_combine(sets.EnmityBoost, {body={ name="ＦＵコート+1", augments={'Enhances "Elemental Sforzo" effect',}, hp=119,},})
+    sets.precast.JA['E.スフォルツォ'] = set_combine(sets.EnmityBoost, {body={ name="ＦＵコート+3", augments={'Enhances "Elemental Sforzo" effect',}, hp=119,},})
 
     -- sub war
     sets.precast.JA['挑発'] = sets.EnmityBoost
@@ -244,14 +244,21 @@ function init_gear_sets()
     -- sub drk
     sets.precast.JA['ラストリゾート'] = sets.EnmityBoost
     
-    sets.midcast['強化魔法'] = {}
+    sets.midcast.enhance_duration = {
+        head={ name="ＥＲガレア+3", hp=111,},
+        legs={ name="ＦＵトラウザ+3", augments={'Enhances "Inspire" effect',}, hp=107},
+        back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Parrying rate+5%',}, fc=0.1, hp=80},
+    }
+
+    sets.midcast['強化魔法'] = sets.midcast.enhance_duration
+
     sets.midcast.enhancing_skill = {
     ammo="ストンチタスラム",
     head={ name="カマインマスク", augments={'HP+60','STR+10','INT+10',}},
-    body={ name="ＦＵコート+1", augments={'Enhances "Elemental Sforzo" effect',}},
+        body={ name="ＦＵコート+3", augments={'Enhances "Elemental Sforzo" effect',}, hp=119,},
     hands="ＲＮミトン+3",
     legs={ name="カマインクウィス+1", augments={'HP+80','STR+12','INT+12',}},
-        feet={ name="ＥＲグリーヴ+2", hp=38,},
+        feet={ name="ＥＲグリーヴ+3", hp=48,},
     neck={ name="バーシチョーカー+1", augments={'Path: A',}},
     waist="ギシドゥバサッシュ",
     left_ear="アンドアーピアス",
@@ -263,7 +270,7 @@ function init_gear_sets()
 
     sets.midcast['強化魔法']['ファランクス'] = {
         ammo="ストンチタスラム",
-    head={ name="ＦＵバンド+2", augments={'Enhances "Battuta" effect',}},
+    head={ head={ name="ＦＵバンド+3", augments={'Enhances "Battuta" effect',}, hp=56,}},
         body={ name="ヘルクリアベスト", augments={'Pet: STR+3','Haste+1','Phalanx +5','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
     hands={ name="ヘルクリアグローブ", augments={'INT+4','Pet: "Regen"+1','Phalanx +4',}},
     legs={ name="ヘルクリアトラウザ", augments={'Mag. Acc.+11','Pet: Attack+15 Pet: Rng.Atk.+15','Phalanx +4','Mag. Acc.+12 "Mag.Atk.Bns."+12',}},
@@ -280,10 +287,10 @@ function init_gear_sets()
     sets.midcast.sird = {
         ammo="ストンチタスラム+1",
         head={ name="ＥＲガレア+3", hp=111,},
-        body={ name="ニャメメイル", hp=136,},
+        body={ name="ＦＵコート+3", augments={'Enhances "Elemental Sforzo" effect',}, hp=119,},
     hands={ name="ローハイドグローブ", augments={'HP+50','Accuracy+15','Evasion+20',}, hp=75,},
         legs={ name="カマインクウィス+1", augments={'HP+80','STR+12','INT+12',}, hp=130},
-        feet={ name="ニャメソルレット", hp=68,},
+        feet={ name="ＥＲグリーヴ+3", hp=48,},
     neck="月明の首飾り",
         waist="オドンブラサッシュ",
         left_ear="磁界の耳",
@@ -294,19 +301,14 @@ function init_gear_sets()
     }
 
     sets.midcast['強化魔法']['ストンスキン']  = {
-        body={ name="ＦＵコート+2", augments={'Enhances "Elemental Sforzo" effect',}, hp=99,},
+        body={ name="ＦＵコート+3", augments={'Enhances "Elemental Sforzo" effect',}, hp=119,},
         neck="ストーンゴルゲット",
         waist="ジーゲルサッシュ",
         left_ear="アースクライピアス",
         right_ring={ name="月光の指輪", hp=110,},
         back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Parrying rate+5%',}, fc=0.1, hp=80},
     }
-    sets.midcast.enhance_duration = {
-        head={ name="ＥＲガレア+3", hp=111,},
-        legs={ name="ＦＵトラウザ+2", augments={'Enhances "Inspire" effect',}, hp=107},
-        back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Parrying rate+5%',}, fc=0.1, hp=80},
-    }
-    
+
     sets.midcast['強化魔法'].Regen = set_combine(sets.midcast.enhance_duration, {head="ＲＮバンド+3", neck="サクロゴルゲット", waist="スローダベルト",right_ear="エリラズピアス+1",})
     sets.midcast['強化魔法'].Refresh = set_combine(sets.midcast.enhance_duration, {waist="ギシドゥバサッシュ",})
     sets.midcast['強化魔法']['ストライ'] = sets.midcast.enhancing_skill
@@ -339,6 +341,8 @@ function init_gear_sets()
         ['スティンキングガス'] = sets.EnmityBoost,
         ['ブラッドセイバー'] = sets.EnmityBoost,
         ['ジェタチュラ'] = sets.EnmityBoost,
+        ['フライトフルロア'] = sets.EnmityBoost,
+        ['コクーン'] = sets.EnmityBoost,
         ['いやしの風'] = sets.midcast['回復魔法'].Cure,
         ['マジックフルーツ'] = sets.midcast['回復魔法'].Cure,
     }
@@ -346,11 +350,11 @@ function init_gear_sets()
     sets.idle = {
         sub="メンシストラップ+1",
         ammo="ストンチタスラム+1",
-    head={ name="ＥＲガレア+3", hp=111,},
+        head={ name="ＥＲガレア+3", hp=111,},
         body={ name="ＲＮコート+3", hp=218,},
         hands={ name="トゥルムミトン+1", hp=74,},
-    legs={ name="ＥＲレグガード+2", hp=90,},
-    feet={ name="ＥＲグリーヴ+2", hp=38,},
+        legs={ name="ＥＲレグガード+3", hp=100,},
+        feet={ name="ＥＲグリーヴ+3", hp=48,},
         neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
         waist="エングレイブベルト",
         left_ear={ name="トゥイストピアス", hp=150,},
@@ -358,8 +362,6 @@ function init_gear_sets()
     left_ring={ name="月明の指輪", hp=100,},
         right_ring="ＶＣリング+1",
         back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Phys. dmg. taken-10%',}, hp=80,},
-        --    legs="ダッシングサブリガ",
-        --    back="リパルスマント",
     }
 
     sets.idle.MagicEvasion = {
@@ -397,13 +399,13 @@ function init_gear_sets()
     }
     
     sets.idle.Stp = {
-    sub="ウトゥグリップ",
-    ammo="ストンチタスラム+1",
-    head={ name="ＦＵバンド+2", augments={'Enhances "Battuta" effect',}},
-    body="ＲＮコート+3",
-    hands={ name="トゥルムミトン+1", hp=74,},
-        legs={ name="ＥＲレグガード+2", hp=90,},
-        feet={ name="ＥＲグリーヴ+2", hp=38,},
+        sub="ウトゥグリップ",
+        ammo="ストンチタスラム+1",
+        head={ head={ name="ＦＵバンド+3", augments={'Enhances "Battuta" effect',}, hp=56,}},
+        body="ＲＮコート+3",
+        hands={ name="トゥルムミトン+1", hp=74,},
+        legs={ name="ＥＲレグガード+3", hp=100,},
+        feet={ name="ＥＲグリーヴ+3", hp=48,},
     neck={ name="バーシチョーカー+1", augments={'Path: A',}},
     waist="フルームベルト",
     left_ear="幽界の耳",
@@ -416,11 +418,11 @@ function init_gear_sets()
     sets.engaged = {
         sub="メンシストラップ+1",
         ammo="ストンチタスラム+1",
-    head={ name="ＥＲガレア+3", hp=111,},
-    body={ name="ＥＲサーコート+2", hp=133,},
+        head={ name="ＥＲガレア+3", hp=111,},
+        body={ name="ＥＲサーコート+3", hp=143,},
         hands={ name="トゥルムミトン+1", hp=74,},
-    legs={ name="ＥＲレグガード+2", hp=90,},
-    feet={ name="ＥＲグリーヴ+2", hp=38,},
+        legs={ name="ＥＲレグガード+3", hp=100,},
+        feet={ name="ＥＲグリーヴ+3", hp=48,},
         neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
         waist="エングレイブベルト",
         left_ear={ name="トゥイストピアス", hp=150,},
@@ -428,8 +430,6 @@ function init_gear_sets()
     left_ring={ name="月明の指輪", hp=100,},
         right_ring="ＶＣリング+1",
         back={ name="オーグマケープ", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Phys. dmg. taken-10%',}, hp=80,},
-        --    legs="ダッシングサブリガ",
-        --    back="リパルスマント",
     }
 
     sets.engaged.MagicEvasion = {
@@ -473,7 +473,7 @@ function init_gear_sets()
     body="アヤモコラッツァ+2",
     hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     legs="メガナダショウス+2",
-    feet={ name="ヘルクリアブーツ", augments={'Accuracy+30','"Triple Atk."+3','AGI+7',}},
+        feet={ name="カマイングリーヴ+1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}, fc=0.08, hp=95,},
     neck={ name="ウォーダチャーム+1", augments={'Path: A',}},
     waist={ name="セールフィベルト+1", augments={'Path: A',}},
     left_ear="シェリダピアス",
@@ -532,7 +532,7 @@ function customize_idle_set(idleSet)
     idleSet = set_combine(idleSet, weapons[state.Weapons.value], {sub=get_melee_set().sub})
 
     if state.Buff['死の宣告'] then
-        idleSet = set_combine(idleSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        idleSet = set_combine(idleSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     end
     return idleSet
 end
@@ -542,7 +542,7 @@ function customize_melee_set(meleeSet)
     meleeSet = set_combine(meleeSet, weapons[state.Weapons.value])
 
     if state.Buff['死の宣告'] then
-        meleeSet = set_combine(meleeSet, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+        meleeSet = set_combine(meleeSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
     elseif state.Buff['睡眠'] then
         meleeSet = set_combine(meleeSet, {head="フレンジーサリット",})
     end

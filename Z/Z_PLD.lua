@@ -8,6 +8,8 @@ end
 function job_setup()
     -- state.Buff['エンボルド'] = buffactive['エンボルド'] or false
     -- state.Buff['ファストキャスト'] = buffactive['ファストキャスト'] or false
+    state.Buff['死の宣告'] = buffactive['死の宣告'] or false
+    state.Buff['睡眠'] = buffactive['睡眠'] or false
 
     include('Mote-TreasureHunter')
     include('Mote-Display')
@@ -19,11 +21,11 @@ function job_setup()
 end
 
 function user_setup()
-    state.OffenseMode:options('Priwen', 'Aegis')
+    state.OffenseMode:options('Ochain','Priwen','Dagger')
     state.HybridMode:options('Normal')
     state.WeaponskillMode:options('Normal')
-    state.IdleMode:options('Priwen', 'Aegis')
-    state.Weapons = M{['description']='Use Weapons', 'Priwen', 'Aegis'}
+    state.IdleMode:options('Ochain','Priwen' )
+    state.Weapons = M{['description']='Use Weapons','Ochain','Priwen','Dagger'}
 
     init_auto_mode()
 
@@ -87,13 +89,17 @@ end
 
 function init_gear_sets()
     sets.weapons = {}
+    sets.weapons.Ochain = {main="ブルトガング", sub="オハン",}
+    -- sets.weapons.Lycurgos = {main="ライカーゴス",}
+
     sets.weapons.Priwen = {
         main="ブルトガング",
         sub={ name="プリュウェン", augments={'HP+50','Mag. Evasion+50','Damage Taken -3%',}, hp=80},
     }
-    sets.weapons.Aegis = {main="ブルトガング", sub="イージス",}
-    -- sets.weapons.Lycurgos = {main="ライカーゴス",}
-
+    sets.weapons.Dagger = {
+        main="マレヴォレンス",
+        sub="オハン",
+    }
     sets.TreasureHunter = {
         head="ヴォルトキャップ",
         -- body={ name="ヘルクリアベスト", augments={'Spell interruption rate down -6%','Pet: "Mag.Atk.Bns."+15','"Treasure Hunter"+2',}},
@@ -118,7 +124,7 @@ function init_gear_sets()
 
     sets.precast.FC = {
         ammo="サピエンスオーブ",
-        head={ name="ＣＶアーメット+2", hp=135,},
+        head={ name="ＣＶアーメット+3", hp=145,},
         body={ name="ＲＶサーコート+3", hp=254,},
     hands={ name="レイライングローブ", augments={'Accuracy+12','Mag. Acc.+14','"Mag.Atk.Bns."+15','"Fast Cast"+2',}, hp=25,},
         legs={ name="アジュナブリーチズ", hp=57,},
@@ -190,7 +196,7 @@ function init_gear_sets()
     sets.precast.WS['イオリアンエッジ'] = sets.precast.WS.acc
 
     sets.precast.JA['ランパート'] = set_combine(sets.EnmityBoost, {head={ name="ＣＢコロネット+2", augments={'Enhances "Iron Will" effect',}, hp=96,},})
-    sets.precast.JA['ホーリーサークル'] = set_combine(sets.EnmityBoost, {feet={ name="ＲＶレギンス+1", hp=48,}})
+    sets.precast.JA['ホーリーサークル'] = set_combine(sets.EnmityBoost, {feet={ name="ＲＶレギンス+2", hp=72,}})
     sets.precast.JA['フィールティ'] = set_combine(sets.EnmityBoost, {body={ name="ＣＢサーコート+1", augments={'Enhances "Fealty" effect',}, hp=118,},})
     sets.precast.JA['シバルリー'] = set_combine(sets.EnmityBoost, {hands={ name="ＣＢガントレ+2", augments={'Enhances "Chivalry" effect',}, hp=124,},})
     sets.precast.JA['インビンシブル'] = set_combine(sets.EnmityBoost, {legs={ name="ＣＢブリーチズ+1", augments={'Enhances "Invincible" effect',}, hp=72,},})
@@ -285,6 +291,7 @@ function init_gear_sets()
     sets.midcast['強化魔法'].Shell = set_combine(sets.midcast['強化魔法'], {left_ear="ブラキュラピアス",})
     sets.midcast['強化魔法']['リアクト'] = sets.midcast.sird_enmity
     sets.midcast['強化魔法']['アクアベール'] = sets.midcast.sird_enmity
+    sets.midcast['強化魔法']['フォイル'] = sets.midcast.sird_enmity
 
     sets.midcast['回復魔法'] = sets.midcast.sird_cure
 
@@ -315,13 +322,13 @@ function init_gear_sets()
 
     sets.idle.Priwen = {
         ammo="ストンチタスラム+1",
-        head={ name="サクパタヘルム", hp=91},
+        head={ name="ＣＶアーメット+3", hp=145},
         body={ name="サクロブレスト", hp=182},
         hands={ name="サクパタガントレ", hp=91,},
         legs={ name="サクパタクウィス", hp=114,},
         feet={ name="サクパタレギンス", hp=68},
         neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
-        waist="キャリアーサッシュ",
+        waist="フルームベルト+1",
         left_ear={ name="クリプティクピアス", hp=40,},
         right_ear={ name="ズワゾピアス+1", augments={'Path: A',}, hp=45},
         left_ring="守りの指輪",
@@ -329,16 +336,16 @@ function init_gear_sets()
         back={ name="ルディアノスマント", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Chance of successful block +5',}, hp=80},
     }
 
-    sets.idle.Aegis = {
+    sets.idle.Ochain = {
         ammo="ストンチタスラム+1",
-        head={ name="サクパタヘルム", hp=91},
+        head={ name="ＣＶアーメット+3", hp=145},
         body={ name="サクロブレスト", hp=182},
         hands={ name="サクパタガントレ", hp=91,},
         legs={ name="サクパタクウィス", hp=114,},
-        feet={ name="サクパタレギンス", hp=68},
+        feet={ name="ＲＶレギンス+2", hp=72,},
         neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
-        waist="キャリアーサッシュ",
-        left_ear={ name="クリプティクピアス", hp=40,},
+        waist="フルームベルト+1",
+        left_ear={ name="幽界の耳", hp=15,},
         right_ear={ name="オノワイヤリング+1", augments={'Path: A',}, hp=110,},
         left_ring="守りの指輪",
         right_ring={ name="アペリエリング+1", augments={'Path: A',}},
@@ -349,13 +356,13 @@ function init_gear_sets()
 
     sets.engaged.Priwen = {
         ammo="ストンチタスラム+1",
-        head={ name="サクパタヘルム", hp=91},
+        head={ name="ＣＶアーメット+3", hp=145},
         body={ name="サクロブレスト", hp=182},
         hands={ name="サクパタガントレ", hp=91,},
-        legs={ name="ＣＶクウィス+2", hp=117,},
+        legs={ name="ＣＶクウィス+3", hp=127,},
         feet={ name="サクパタレギンス", hp=68},
         neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
-        waist="キャリアーサッシュ",
+        waist="フルームベルト+1",
         left_ear={ name="クリプティクピアス", hp=40,},
         right_ear={ name="ズワゾピアス+1", augments={'Path: A',}, hp=45},
         left_ring="守りの指輪",
@@ -363,16 +370,32 @@ function init_gear_sets()
         back={ name="ルディアノスマント", augments={'HP+60','Chance of successful block +5',}, hp=60},
     }
 
-    sets.engaged.Aegis = {
+    sets.engaged.Ochain = {
         ammo="ストンチタスラム+1",
-        head={ name="サクパタヘルム", hp=91},
+        head={ name="ＣＶアーメット+3", hp=145},
         body={ name="サクロブレスト", hp=182},
         hands={ name="サクパタガントレ", hp=91,},
-        legs={ name="サクパタクウィス", hp=114,},
-        feet={ name="サクパタレギンス", hp=68},
+        legs={ name="ＣＶクウィス+3", hp=127,},
+        feet={ name="ＲＶレギンス+2", hp=72,},
         neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
-        waist="キャリアーサッシュ",
-        left_ear={ name="クリプティクピアス", hp=40,},
+        waist="フルームベルト+1",
+        left_ear={ name="幽界の耳", hp=15,},
+        right_ear={ name="オノワイヤリング+1", augments={'Path: A',}, hp=110,},
+        left_ring="守りの指輪",
+        right_ring={ name="アペリエリング+1", augments={'Path: A',}},
+        back={ name="ルディアノスマント", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}, hp=80},
+    }
+
+    sets.engaged.Dagger = {
+        ammo="ストンチタスラム+1",
+        head={ name="ＣＶアーメット+3", hp=145},
+        body={ name="サクロブレスト", hp=182},
+        hands={ name="サクパタガントレ", hp=91,},
+        legs={ name="ＣＶクウィス+3", hp=127,},
+        feet={ name="ＲＶレギンス+2", hp=72,},
+        neck={ name="アンムーヴカラー+1", augments={'Path: A',}, hp=200,},
+        waist="フルームベルト+1",
+        left_ear={ name="幽界の耳", hp=15,},
         right_ear={ name="オノワイヤリング+1", augments={'Path: A',}, hp=110,},
         left_ring="守りの指輪",
         right_ring={ name="アペリエリング+1", augments={'Path: A',}},
@@ -426,12 +449,22 @@ end
 function customize_idle_set(idleSet)
     local weapons = sets.weapons
     idleSet = set_combine(idleSet, weapons[state.Weapons.value])
+
+    if state.Buff['死の宣告'] then
+        idleSet = set_combine(idleSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+    end
+
     return idleSet
 end
 
 function customize_melee_set(meleeSet)
     local weapons = sets.weapons
     meleeSet = set_combine(meleeSet, weapons[state.Weapons.value])
+
+    if state.Buff['死の宣告'] then
+        idleSet = set_combine(idleSet, {neck="ニカンダネックレス",}, {waist="ギジドゥバサッシュ",}, {left_ring={ name="ブレンモドリング+1", bag="wardrobe5",}}, { right_ring={ name="ブレンモドリング+1", bag="wardrobe6",}})
+    end
+
     return meleeSet
 end
 

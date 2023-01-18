@@ -217,27 +217,23 @@ function check_spell_buff()
 end
 
 local use_ws = {
-    [1] = 'エヴィサレーション',
+    [1] = 'サベッジブレード',
+--    [1] = 'エヴィサレーション',
 --    [2] = 'ルドラストーム',
 --    [3] = 'ルドラストーム',
 }
 local ws_index = 1
 local ws_target_id = 0
-local Flourish = {name='R.フラリッシュ', buff='フィニシングムーブ5', id=222}
 function check_ws()
     if not check_can_use_ws() then return false end
     local recasts = windower.ffxi.get_ability_recasts()
     local buffs = player.buff_details
---    if player.sub_job == '踊' and player.tp > 400 then
---    if buffactive[Flourish.buff] and recasts[Flourish.id] == 0 then
---        windower.chat.input('/ja "'..windower.to_shift_jis(Flourish.name) ..'" <me>')
     if player.tp >= 1000 then
         ws_target_id = windower.ffxi.get_mob_by_target('t').id
         windower.chat.input('/ws "'..windower.to_shift_jis(use_ws[ws_index]) ..'" <t>')
         ws_index = ws_index % #use_ws + 1
         tickdelay = os.clock() + 5
         return true
---    end
     end
     return false
 end

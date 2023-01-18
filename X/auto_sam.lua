@@ -31,10 +31,10 @@ local enmity_lists = {
 --    {name='フォイル', id=840, pf='/ma', t='me'},
     {name='心眼', id=133, pf='/ja', t='me'},
     {name='峰打ち', id=137, pf='/ja', t='t'},
-    {name='先義後利', id=141, pf='/ja', t='me'},
+--    {name='先義後利', id=141, pf='/ja', t='me'},
     {name='石火之機', id=140, pf='/ja', t='me'},
     {name='葉隠', id=54, pf='/ja', t='me'},
-    {name='渾然一体', id=132, pf='/ja', t='t'},
+--    {name='渾然一体', id=132, pf='/ja', t='t'},
 --    {name='護摩の守護円', id=135, pf='/ja', t='me'},
 --    {name='破魔の刃', id=53, pf='/ja', t='t'},
 }

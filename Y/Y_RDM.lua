@@ -112,7 +112,7 @@ function init_gear_sets()
 --    crocea_c_levante_dw = {main={ name="クロセアモース", augments={'Path: C',}}, sub="レヴァンテダガー",}
     Club_dw = {main="マクセンチアス", sub="トーレット"}
     Naegling_dw = {main="ネイグリング", sub="シブロン"}
-    tauret_dw = {main="トーレット", sub="ターニオンダガー+1"}
+    tauret_dw = {main="トーレット", sub="マレヴォレンス"}
 --    mandau_dw = {main="マンダウ", sub="ターニオンダガー+1"}
     d1_dw = {main="クトゥルブナイフ", sub="ノルギッシュダガー",}
 
@@ -197,12 +197,12 @@ function init_gear_sets()
 
     sets.precast.WS.magic = {
     ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
-    head="ジャリコロナル+2",
-    body="ジャリローブ+2",
-    hands="ジャリカフス+2",
-    legs={ name="ＡＭスロップス+1", augments={'MP+80','"Mag.Atk.Bns."+25','Enmity-6',}},
-    feet="ジャリピガッシュ+2",
-    neck="フォシャゴルゲット",
+    head="ＬＴシャペル+2",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
+    legs="ＬＴフュゾー+2",
+    feet="ＬＴウゾー+2",
+    neck="シビルスカーフ",
     waist="サクロコード",
     left_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
     right_ear="マリグナスピアス",
@@ -244,19 +244,19 @@ function init_gear_sets()
     }
 
     sets.precast.WS.wsd = {
-    ammo="ヘイストピニオン+1",
-    head={ name="ブリスタサリット+1", augments={'Path: A',}},
-    body="アヤモコラッツァ+2",
-    hands="ＡＴグローブ+2",
-    legs="アヤモコッシャレ+2",
-    feet="アヤモガンビエラ+2",
+    ammo="オシャシャの原論文",
+    head="ＬＴシャペル+2",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
+    legs="ＬＴフュゾー+2",
+    feet="ＬＴウゾー+2",
     neck="フォシャゴルゲット",
-    waist={ name="セールフィベルト+1", augments={'Path: A',}},
+    waist="フォシャベルト",
     left_ear="シェリダピアス",
     right_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
     left_ring={ name="メタモルリング+1", augments={'Path: A',}},
     right_ring="イラブラットリング",
-    back="ヴェスピッドマント",
+    back={ name="スセロスケープ", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Fast Cast"+3','"Regen"+2',}},
     }
 
     sets.precast.WS['ガストスラッシュ'] = sets.precast.WS.magic
@@ -285,7 +285,7 @@ function init_gear_sets()
     body={ name="テルキネシャジュブ", augments={'Enh. Mag. eff. dur. +9',}},
     hands={ name="ＶＩグローブ+1", augments={'Enhancing Magic duration',}},
     legs={ name="テルキネブラコーニ", augments={'"Cure" potency +7%','Enh. Mag. eff. dur. +10',}},
-    feet="ＬＴウゾー+1",
+    feet="ＬＴウゾー+2",
     neck="デュエルトルク",
     waist="エンブラサッシュ",
     left_ear="アンドアーピアス",
@@ -302,7 +302,7 @@ function init_gear_sets()
     body={ name="テルキネシャジュブ", augments={'Enh. Mag. eff. dur. +9',}},
     hands={ name="ＶＩグローブ+1", augments={'Enhancing Magic duration',}},
     legs={ name="テルキネブラコーニ", augments={'"Cure" potency +7%','Enh. Mag. eff. dur. +10',}},
-    feet="ＬＴウゾー+1",
+    feet="ＬＴウゾー+2",
     neck="デュエルトルク",
     waist="エンブラサッシュ",
     left_ear="アンドアーピアス",
@@ -320,7 +320,7 @@ function init_gear_sets()
     body={ name="ＶＩタバード+1", augments={'Enhances "Chainspell" effect',}},
     hands={ name="ＶＩグローブ+1", augments={'Enhancing Magic duration',}},
     legs="ＡＴタイツ+2",
-    feet="ＬＴウゾー+1",
+    feet="ＬＴウゾー+2",
     neck="メリックトルク",
     waist="オリンポスサッシュ",
     left_ear="ミミルピアス",
@@ -336,7 +336,7 @@ function init_gear_sets()
     body={ name="テルキネシャジュブ", augments={'Enh. Mag. eff. dur. +9',}},
     hands={ name="ＶＩグローブ+1", augments={'Enhancing Magic duration',}},
     legs={ name="テルキネブラコーニ", augments={'"Cure" potency +7%','Enh. Mag. eff. dur. +10',}},
-    feet="ＬＴウゾー+1",
+    feet="ＬＴウゾー+2",
     neck="デュエルトルク",
     waist="エンブラサッシュ",
     left_ear="アンドアーピアス",
@@ -392,8 +392,8 @@ function init_gear_sets()
 
     sets.midcast['強化魔法']['ストンスキン'] = set_combine(sets.midcast['強化魔法'], {legs="シェダルサラウィル", neck='ノデンズゴルゲット', left_ear='アースクライピアス', waist="ジーゲルサッシュ",})
     sets.midcast['強化魔法']['アクアベール'] = set_combine(sets.midcast['強化魔法'], {head="ＡＭコイフ+1", legs="シェダルサラウィル",})
-    sets.midcast['強化魔法'].Refresh = set_combine(sets.midcast['強化魔法'], {head="ＡＭコイフ+1", body="ＡＴタバード+3",legs="ＬＴフュゾー+1",})
-    sets.midcast['強化魔法'].Refresh_Others = set_combine(sets.midcast['強化魔法'].Others, {head="ＡＭコイフ+1", body="ＡＴタバード+3",legs="ＬＴフュゾー+1",})
+    sets.midcast['強化魔法'].Refresh = set_combine(sets.midcast['強化魔法'], {head="ＡＭコイフ+1", body="ＡＴタバード+3",legs="ＬＴフュゾー+2",})
+    sets.midcast['強化魔法'].Refresh_Others = set_combine(sets.midcast['強化魔法'].Others, {head="ＡＭコイフ+1", body="ＡＴタバード+3",legs="ＬＴフュゾー+2",})
     sets.midcast['強化魔法'].Regen = set_combine(sets.midcast['強化魔法'], {main="ボレラブンガ", sub="アムラピシールド",})
     sets.midcast['強化魔法'].Regen_Others = set_combine(sets.midcast['強化魔法'].Others, {main="ボレラブンガ", sub="アムラピシールド",})
     sets.midcast['強化魔法'].Protect = set_combine(sets.midcast['強化魔法'], {right_ear="ブラキュラピアス",})
@@ -453,8 +453,8 @@ function init_gear_sets()
     sets.midcast.magic_acc = {
     ammo="カルボロンストーン",
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body="ＬＴサヨン+1",
-    hands="ＬＴガントロ+1",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
     legs={ name="カイロンホーズ", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Haste+3','Mag. Acc.+5',}},
     feet={ name="ＶＩブーツ+1", augments={'Immunobreak Chance',}},
     neck="デュエルトルク",
@@ -474,7 +474,7 @@ function init_gear_sets()
     ammo="カルボロンストーン",
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
     body="ＡＴタバード+1",
-    hands="ＬＴガントロ+1",
+    hands="ＬＴガントロ+2",
     legs={ name="カイロンホーズ", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Haste+3','Mag. Acc.+5',}},
     feet={ name="ＶＩブーツ+1", augments={'Immunobreak Chance',}},
     neck="デュエルトルク",
@@ -491,8 +491,8 @@ function init_gear_sets()
     sets.midcast['弱体魔法'].MND = {
     ammo="カルボロンストーン",
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body="ＬＴサヨン+1",
-    hands="ＬＴガントロ+1",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
     legs={ name="カイロンホーズ", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Haste+3','Mag. Acc.+5',}},
     feet={ name="ＶＩブーツ+1", augments={'Immunobreak Chance',}},
     neck="デュエルトルク",
@@ -507,8 +507,8 @@ function init_gear_sets()
     sets.midcast['弱体魔法'].MND_Skill = {
     ammo="カルボロンストーン",
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body="ＬＴサヨン+1",
-    hands="ＬＴガントロ+1",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
     legs={ name="カイロンホーズ", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Haste+3','Mag. Acc.+5',}},
     feet={ name="ＶＩブーツ+1", augments={'Immunobreak Chance',}},
     neck="デュエルトルク",
@@ -524,7 +524,7 @@ function init_gear_sets()
     ammo="カルボロンストーン",
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
     body="ＡＴタバード+1",
-    hands="ＬＴガントロ+1",
+    hands="ＬＴガントロ+2",
     legs={ name="カイロンホーズ", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Haste+3','Mag. Acc.+5',}},
     feet={ name="ＶＩブーツ+1", augments={'Immunobreak Chance',}},
     neck="デュエルトルク",
@@ -539,8 +539,8 @@ function init_gear_sets()
     sets.midcast['弱体魔法'].INT = {
     ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body="ＬＴサヨン+1",
-    hands="ＬＴガントロ+1",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
     legs={ name="カイロンホーズ", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Haste+3','Mag. Acc.+5',}},
     feet={ name="ＶＩブーツ+1", augments={'Immunobreak Chance',}},
     neck="デュエルトルク",
@@ -555,8 +555,8 @@ function init_gear_sets()
     sets.midcast['弱体魔法'].INT_Skill = {
     ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body="ＬＴサヨン+1",
-    hands="ＬＴガントロ+1",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
     legs={ name="カイロンホーズ", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Haste+3','Mag. Acc.+5',}},
     feet={ name="ＶＩブーツ+1", augments={'Immunobreak Chance',}},
     neck="デュエルトルク",
@@ -572,7 +572,7 @@ function init_gear_sets()
     ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
     body="ＡＴタバード+1",
-    hands="ＬＴガントロ+1",
+    hands="ＬＴガントロ+2",
     legs={ name="カイロンホーズ", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','Haste+3','Mag. Acc.+5',}},
     feet={ name="ＶＩブーツ+1", augments={'Immunobreak Chance',}},
     neck="デュエルトルク",
@@ -587,10 +587,10 @@ function init_gear_sets()
     sets.midcast['弱体魔法'].Saboteur = {
     ammo="カルボロンストーン",
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body="ＬＴサヨン+1",
-    hands="ＬＴガントロ+1",
-    legs="ＬＴフュゾー+1",
-    feet="ＬＴウゾー+1",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
+    legs="ＬＴフュゾー+2",
+    feet="ＬＴウゾー+2",
     neck="デュエルトルク",
     waist="ルミネートサッシュ",
     left_ear="スノトラピアス",
@@ -603,8 +603,8 @@ function init_gear_sets()
     sets.midcast['ディスペガ'] = {
         range="ウルル",
         head="ＶＩシャポー+3",
-        body="ＬＴサヨン+1",
-        hands="ＬＴガントロ+1",
+        body="ＬＴサヨン+2",
+        hands="ＬＴガントロ+2",
         legs={ name="カイロンホーズ", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Drain" and "Aspir" potency +2','INT+14','Mag. Acc.+13',}},
         feet="ＶＩブーツ+3",
         neck="デュエルトルク+2",
@@ -636,10 +636,11 @@ function init_gear_sets()
 --    main="マランスタッフ",
 --    sub="エンキストラップ",
     ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
-    body={ name="コーホトクローク+1", augments={'Path: A',}},
-    hands={ name="アマリクゲージ", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
-    legs={ name="ＡＭスロップス+1", augments={'MP+80','"Mag.Atk.Bns."+25','Enmity-6',}},
-    feet="ジャリピガッシュ+2",
+    head="ＬＴシャペル+2",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
+    legs="ＬＴフュゾー+2",
+    feet="ＬＴウゾー+2",
     neck="サンクトネックレス",
     waist="サクロコード",
     left_ear="ヘカテーピアス",
@@ -653,10 +654,11 @@ function init_gear_sets()
 --    main="マランスタッフ",
 --    sub="エンキストラップ",
     ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
-    body={ name="コーホトクローク+1", augments={'Path: A',}},
-    hands={ name="アマリクゲージ", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
-    legs={ name="ＡＭスロップス+1", augments={'MP+80','"Mag.Atk.Bns."+25','Enmity-6',}},
-    feet="ジャリピガッシュ+2",
+    head="ＬＴシャペル+2",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
+    legs="ＬＴフュゾー+2",
+    feet="ＬＴウゾー+2",
     neck="水影の首飾り",
     waist="サクロコード",
     left_ear="ヘカテーピアス",
@@ -670,15 +672,15 @@ function init_gear_sets()
         range=empty,
     ammo="ホミリアリ",
     head={ name="ＶＩシャポー+1", augments={'Enfeebling Magic duration','Magic Accuracy',}},
-    body="マリグナスタバード",
-    hands="マリグナスグローブ",
-    legs={ name="カマインクウィス+1", augments={'HP+80','STR+12','INT+12',}},
-    feet="マリグナスブーツ",
-    neck="バーシチョーカー",
-    waist="風鳥の帯",
-    left_ear="ライストームピアス",
-    right_ear="サイストームピアス",
-    left_ring="守りの指輪",
+    body="ＬＴサヨン+2",
+    hands="ＬＴガントロ+2",
+    legs="マリグナスタイツ",
+    feet="ブンジサボ",
+    neck="サンクトネックレス",
+    waist="キャリアーサッシュ",
+    left_ear="エテオレートピアス",
+    right_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
+    left_ring="エタナリング",
     right_ring="ＷＬリング+1",
     back={ name="スセロスケープ", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Fast Cast"+3','"Regen"+2',}},
     }
@@ -687,18 +689,18 @@ function init_gear_sets()
 
     sets.engaged = {
         range=empty,
-    ammo="ホミリアリ",
+    ammo="ヘイストピニオン+1",
     head="マリグナスシャポー",
     body="マリグナスタバード",
     hands="マリグナスグローブ",
     legs="マリグナスタイツ",
     feet="マリグナスブーツ",
-    neck="アスパーネックレス",
-    waist="セールフィベルト+1",
-    left_ear="シェリダピアス",
-    right_ear="オノワイヤリング",
-    left_ring="守りの指輪",
-    right_ring="エタナリング",
+    neck="サンクトネックレス",
+    waist="ケンタークベルト",
+    left_ear="ダッジョンピアス",
+    right_ear="ハートシーカピアス",
+    left_ring="エタナリング",
+    right_ring="イラブラットリング",
     back={ name="スセロスケープ", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+2','"Fast Cast"+3','"Regen"+2',}},
     }
 

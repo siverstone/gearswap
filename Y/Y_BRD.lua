@@ -93,12 +93,12 @@ function init_gear_sets()
     sets.weapons.Naegling = set_combine({main={name="ネイグリング"}, sub={name="玄冥盾"},}, sets.Linos_melee)
     sets.weapons.Staff = set_combine({main={name="マランスタッフ+1"}, sub={name="エンキストラップ"},}, sets.Linos_melee)
 
-    sets.weapons.Levante_DW = set_combine({main={name="レヴァンテダガー"}, sub={name="ターニオンダガー+1"}}, sets.Linos_melee)
+    sets.weapons.Levante_DW = set_combine({main={name="レヴァンテダガー"}, sub={name="クレパスクラナイフ"}}, sets.Linos_melee)
     sets.weapons.Carnwenhan_DW = set_combine({main={name="カルンウェナン"}, sub={name="トゥワシュトラ"},}, sets.Linos_melee)
-    sets.weapons.Twashtar_DW = set_combine({main={name="トゥワシュトラ"}, sub={name="トーレット"},}, sets.Linos_melee)
+    sets.weapons.Twashtar_DW = set_combine({main={name="フセット+3"}, sub={name="パラゾニウム+2"},}, sets.Linos_melee)
     sets.weapons.Aeneas_DW = set_combine({main={name="エーネアス"}, sub={name="トゥワシュトラ"},}, sets.Linos_melee)
-    sets.weapons.Tauret_DW = set_combine({main={name="トーレット"}, sub={name="ターニオンダガー+1"},}, sets.Linos_melee)
-    sets.weapons.Naegling_DW = set_combine({main={name="ネイグリング"}, sub={name="ターニオンダガー+1"},}, sets.Linos_melee)
+    sets.weapons.Tauret_DW = set_combine({main={name="トーレット"}, sub={name="クレパスクラナイフ"},}, sets.Linos_melee)
+    sets.weapons.Naegling_DW = set_combine({main={name="ネイグリング"}, sub={name="セントヴェンテ"},}, sets.Linos_melee)
 
     sets.TreasureHunter = {
         head="白ララブキャップ+1",
@@ -124,7 +124,7 @@ function init_gear_sets()
 
     sets.precast.FC['BardSong'] = {
 --        main={ name="カーリ", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
-        head="ＦＬキャロ+1",
+        head="ＦＬキャロ+2",
     body="インヤガジュバ+2",
     hands={ name="レイライングローブ", augments={'Accuracy+9','Mag. Acc.+5','"Mag.Atk.Bns."+6','"Fast Cast"+1',}},
     legs="アヤモコッシャレ+2",
@@ -141,18 +141,18 @@ function init_gear_sets()
     sets.precast.FC['BardSong'].March_Marsyas = set_combine(sets.precast.FC['BardSong'], {range="マルシュアス",})
 
     sets.precast.WS = set_combine(sets.Linos_ws, { -- wsd
-        head={ name="ニャメヘルム", augments={'Path: B',}},
-        body={ name="ＢＩジュストコル+3", augments={'Enhances "Troubadour" effect',}},
-        hands={ name="ニャメガントレ", augments={'Path: B',}},
-        legs={ name="ニャメフランチャ", augments={'Path: B',}},
-        feet={ name="ニャメソルレット", augments={'Path: B',}},
-        neck="フォシャゴルゲット",
-        waist={ name="ケンタークベルト+1", augments={'Path: A',}},
-        left_ear="マーケピアス+1",
-        right_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
-        left_ring="イラブラットリング",
-        right_ring={ name="カコエシクリング+1", augments={'Path: A',}},
-        back={ name="インタラアスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+    head={ name="ブリスタサリット+1", augments={'Path: A',}},
+    body="アヤモコラッツァ+2",
+    hands="ブンジグローブ",
+    legs="ＦＬラングラヴ+2",
+    feet="ＦＬコテュルヌ+2",
+    neck="フォシャゴルゲット",
+    waist="フォシャベルト",
+    left_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
+    right_ear="胡蝶のイヤリング",
+    left_ring="イラブラットリング",
+    right_ring="エタナリング",
+    back={ name="インタラアスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
     })
 
     sets.precast.WS.multi = set_combine(sets.Linos_ws, {
@@ -239,9 +239,9 @@ function init_gear_sets()
     sets.midcast['回復魔法'].Curaga = sets.midcast['回復魔法'].Cure
 
     sets.midcast['強化魔法'] = {
-    sub="アムラピシールド",
+--    sub="アムラピシールド",
     head={ name="テルキネキャップ", augments={'Enh. Mag. eff. dur. +10',}},
-    body={ name="テルキネシャジュブ", augments={'"Fast Cast"+5','Enh. Mag. eff. dur. +10',}},
+    body={ name="テルキネシャジュブ", augments={'"Fast Cast"+5','Enh. Mag. eff. dur. +10',}}, 
     hands={ name="テルキネグローブ", augments={'Potency of "Cure" effect received+7%','Enh. Mag. eff. dur. +10',}},
     legs={ name="テルキネブラコーニ", augments={'"Cure" potency +7%','Enh. Mag. eff. dur. +10',}},
     feet={ name="テルキネピガッシュ", augments={'"Fast Cast"+5','Enh. Mag. eff. dur. +10',}},
@@ -255,16 +255,17 @@ function init_gear_sets()
     }
 
     sets.midcast['強化魔法']['ストンスキン'] = set_combine(sets.midcast['強化魔法'], {neck='ストーンゴルゲット', left_ear='アースクライピアス', waist="ジーゲルサッシュ",})
+
     sets.midcast.song_duration = {
 --        main="カルンウェナン",
-        head="ＦＬキャロ+1",
-        body="ＦＬオングルリヌ+1",
-        hands="ＦＬマンシェト+1",
+        head="ＦＬキャロ+2",
+        body="ＦＬオングルリヌ+2",
+        hands="ＦＬマンシェト+2",
         legs="インヤガシャルワ+2",
         feet="ＢＲスリッパー+3",
         neck="月虹の呼び子+1",
     waist="セールフィベルト+1",
-    left_ear="エヴァンズピアス",
+        left_ear="エテオレートピアス",
     right_ear="オノワイヤリング",
     left_ring="守りの指輪",
     right_ring="スティキニリング",
@@ -273,12 +274,12 @@ function init_gear_sets()
     
     sets.midcast.magic_acc = {
 --        main="カルンウェナン",
-        sub="アムラピシールド",
+--        sub="アムラピシールド",
     range="シュリンクス",
         head="ＢＲランドリト+3",
         body="ＢＲジュスト+3",
         hands="ＢＲカフス+3",
-        legs="ＦＬラングラヴ+1",
+        legs="ＦＬラングラヴ+2",
         feet="ＢＲスリッパー+3",
         neck="月虹の呼び子+1",
         waist="ルーミネリサッシュ",
@@ -290,7 +291,7 @@ function init_gear_sets()
     }
     
     sets.midcast.lullaby_troubadour = {
-        body="ＦＬオングルリヌ+1",
+        body="ＦＬオングルリヌ+2",
         legs="インヤガシャルワ+2",
     }
 
@@ -311,8 +312,8 @@ function init_gear_sets()
     back={ name="インタラアスケープ", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Enmity-10','Damage taken-5%',}},
     }
     sets.midcast.song_dummy = {
+--        main={ name="カーリ", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
         range="ブラーハープ+1",
-        main={ name="カーリ", augments={'MP+60','Mag. Acc.+20','"Refresh"+1',}},
         head={ name="ヴァニヤフード", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},
         body="インヤガジュバ+2",
         hands={ name="レイライングローブ", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
@@ -328,24 +329,24 @@ function init_gear_sets()
     }
 
     sets.midcast['BardSong'] = sets.midcast.song_duration
-    sets.midcast['BardSong'].Paeon      = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Ballad     = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Minne      = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Mambo      = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Carol      = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Minuet     = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+1", feet="ブリオソスリッパー",})
-    sets.midcast['BardSong'].Madrigal   = set_combine(sets.midcast.song_base, {head="ＦＬキャロ+1", body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+1", back="インタラアスケープ",})
-    sets.midcast['BardSong'].Prelude    = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+1", feet="ブリオソスリッパー", back="インタラアスケープ",})
-    sets.midcast['BardSong'].March      = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", hands="ＦＬマンシェト+1", legs="インヤガシャルワ+1", feet="ブリオソスリッパー",}) 
+    sets.midcast['BardSong'].Paeon      = set_combine(sets.midcast.song_base, {head="ＢＲランドリト+3", legs="インヤガシャルワ+2",})
+    sets.midcast['BardSong'].Ballad     = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+2", legs="ＦＬラングラヴ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Minne      = set_combine(sets.midcast.song_base, {legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Mambo      = set_combine(sets.midcast.song_base, {legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Carol      = set_combine(sets.midcast.song_base, {legs="インヤガシャルワ+2", hands="ムセスゲージ+1",})
+    sets.midcast['BardSong'].Minuet     = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Madrigal   = set_combine(sets.midcast.song_base,{head="ＦＬキャロ+2", legs="インヤガシャルワ+2", back={ name="インタラアスケープ", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}}})
+    sets.midcast['BardSong'].Prelude    = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+2", feet="ＢＲスリッパー+3", back={ name="インタラアスケープ", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Damage taken-5%',}}})
+    sets.midcast['BardSong'].March      = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+2", hands="ＦＬマンシェト+2", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",}) 
     sets.midcast['BardSong'].March_Marsyas = set_combine(sets.midcast['BardSong'].March, {range="マルシュアス",})
-    sets.midcast['BardSong'].Etude      = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Scherzo    = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Etude      = set_combine(sets.midcast.song_base, {legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Scherzo    = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+2", legs="インヤガシャルワ+2", feet="ＦＬコテュルヌ+2"})
     sets.midcast['BardSong'].Threnody   = set_combine(sets.midcast.magic_acc, {body="ムセスマンティル+1"})
     sets.midcast['BardSong'].Resist = set_combine(sets.midcast.song_base, {legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Mazurka = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Hymnus = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Sirvente = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
-    sets.midcast['BardSong'].Dirge = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+1", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Mazurka = set_combine(sets.midcast.song_base, {legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Hymnus = set_combine(sets.midcast.song_base, {legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Sirvente = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+2",legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
+    sets.midcast['BardSong'].Dirge = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+2", legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
     sets.midcast['BardSong'].Lullaby = sets.midcast.magic_acc
     sets.midcast['BardSong'].LullabyAoE = sets.midcast.magic_acc
     sets.midcast['BardSong'].Requiem = sets.midcast.magic_acc
@@ -359,15 +360,15 @@ function init_gear_sets()
     sets.midcast['弱体魔法'] = sets.midcast.magic_acc
 
     sets.idle = {
-    head="インヤガティアラ+2",
-    body="インヤガジュバ+2",
-    hands="インヤガダスタナ+2",
-    legs="インヤガシャルワ+2",
-    feet="ＦＬコテュルヌ+1",
-    neck="オルンミラトルク",
-    waist="風鳥の帯",
-    left_ear="エヴァンズピアス",
-    right_ear="オノワイヤリング",
+    head="ＦＬキャロ+2",
+    body="ＦＬオングルリヌ+2",
+    hands="ＦＬマンシェト+2",
+    legs="ＦＬラングラヴ+2",
+    feet="ＦＬコテュルヌ+2",
+    neck="サンクトネックレス",
+    waist="キャリアーサッシュ",
+    left_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
+    right_ear="ハーティーピアス",
     left_ring="守りの指輪",
     right_ring="ＷＬリング+1",
     back={ name="インタラアスケープ", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Enmity-10','Damage taken-5%',}},
@@ -378,12 +379,12 @@ function init_gear_sets()
     head={ name="ブリスタサリット+1", augments={'Path: A',}},
     body="アヤモコラッツァ+2",
     hands="ブンジグローブ",
-    legs="アヤモコッシャレ+2",
-    feet="ブンジサボ",
+    legs="ＦＬラングラヴ+2",
+    feet="ＦＬコテュルヌ+2",
     neck="サンクトネックレス",
-    waist="ケンタークベルト",
-    left_ear="ブランデシュピアス",
-    right_ear="ブレードボンピアス",
+    waist={ name="セールフィベルト+1", augments={'Path: A',}},
+    left_ear="ダッジョンピアス",
+    right_ear="ハートシーカピアス",
     left_ring="イラブラットリング",
     right_ring="エタナリング",
     back={ name="インタラアスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10',}},
@@ -412,23 +413,23 @@ function job_post_aftercast(spell, action, spellMap, eventArgs)
 end
 
 function customize_idle_set(idleSet)
---    local weapon = sets.weapons[state.Weapons.value]
---    if player.equipment.sub == weapon.main.name then
---        weapon.sub.priority = 1
---        weapon.main.priority = 0
---    end
---    idleSet = set_combine(idleSet, weapon)
---    return idleSet
+    local weapon = sets.weapons[state.Weapons.value]
+    if player.equipment.sub == weapon.main.name then
+        weapon.sub.priority = 1
+        weapon.main.priority = 0
+    end
+    idleSet = set_combine(idleSet, weapon)
+    return idleSet
 end
 
 function customize_melee_set(meleeSet)
---    local weapon = sets.weapons[state.Weapons.value]
---    if player.equipment.sub == weapon.main.name then
---        weapon.sub.priority = 1
---        weapon.main.priority = 0
---    end
---    meleeSet = set_combine(meleeSet, weapon)
---    return meleeSet
+    local weapon = sets.weapons[state.Weapons.value]
+    if player.equipment.sub == weapon.main.name then
+        weapon.sub.priority = 1
+        weapon.main.priority = 0
+    end
+    meleeSet = set_combine(meleeSet, weapon)
+    return meleeSet
 end
 
 function job_buff_change(buff, gain)
@@ -440,8 +441,8 @@ function job_update(cmdParams, eventArgs)
 end
 
 function set_equip_weapon(equipSet, weaponSet)
---    equipSet.main = weaponSet.main
---    equipSet.sub = weaponSet.sub
+    equipSet.main = weaponSet.main
+    equipSet.sub = weaponSet.sub
 end
 
 function set_weapons_by_sub_job(subJob)

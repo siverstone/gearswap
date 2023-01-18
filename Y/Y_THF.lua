@@ -83,7 +83,7 @@ function init_gear_sets()
     sets.weapons = {}
     sets.weapons.Gandring = { main={name="ガンドリング"}, sub={ name="トゥワシュトラ"}}
     sets.weapons.Twashtar = { main={name="トゥワシュトラ"}, sub={ name="クレパスクラナイフ",}}
-    sets.weapons.Tauret = { main={name="トーレット"}, sub={ name="サンダン"}}
+    sets.weapons.Tauret = { main={name="トーレット"}, sub={ name="クレパスクラナイフ"}}
     sets.weapons.Centovente = { main={name="トゥワシュトラ"}, sub={ name="マレヴォレンス"}}
 
     sets.TreasureHunter = {
@@ -112,7 +112,7 @@ function init_gear_sets()
     }
 
     sets.precast.WS = { -- Multi
-        ammo="パルーグストーン",
+--        ammo="パルーグストーン",
         head={ name="アデマボンネット+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
         body="ＰＬベスト+3",
         hands={ name="アデマリスト+1", augments={'DEX+12','AGI+12','Accuracy+20',}},
@@ -128,7 +128,7 @@ function init_gear_sets()
     }
 
     sets.precast.WS.wsd = {
-        ammo="パルーグストーン",
+--        ammo="パルーグストーン",
         head="ＰＬボンネット+3",
         body={ name="ニャメメイル", augments={'Path: B',}},
         hands="メガナダグローブ+2",
@@ -145,7 +145,7 @@ function init_gear_sets()
     }
     
     sets.precast.WS.sata = {
-        ammo="イェットシーラ+1",
+--        ammo="イェットシーラ+1",
         head="ＰＬボンネット+3",
         body={ name="ニャメメイル", augments={'Path: B',}},
         hands="メガナダグローブ+2",
@@ -162,7 +162,7 @@ function init_gear_sets()
     }
     
     sets.precast.WS.critical = {
-    ammo="イェットシーラ",
+--    ammo="イェットシーラ",
     head={ name="ブリスタサリット+1", augments={'Path: A',}},
     body="グレティキュイラス",
     hands="グレティガントレ",
@@ -178,7 +178,7 @@ function init_gear_sets()
     }
 
     sets.precast.WS.magic = {
-        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
+--        ammo={ name="ガストリタスラム+1", augments={'Path: A',}},
         head={ name="ニャメヘルム", augments={'Path: B',}},
         body={ name="ニャメメイル", augments={'Path: B',}},
         hands={ name="ニャメガントレ", augments={'Path: B',}},
@@ -243,7 +243,7 @@ function init_gear_sets()
     }
 
     sets.idle = {
-    ammo="昏黄の礫",
+    range={ name="アンチテイル+1", augments={'Path: A',}},
     head="グレティマスク",
     body="グレティキュイラス",
     hands="グレティガントレ",
@@ -251,44 +251,44 @@ function init_gear_sets()
     feet="グレティブーツ",
     neck="サンクトネックレス",
     waist="ゴールドモグベルト",
-    left_ear="シェリダピアス",
-    right_ear="オノワイヤリング",
+    left_ear="ハーティーピアス",
+    right_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
     left_ring="守りの指輪",
     right_ring="ゼラチナスリング",
-    back="トレピッドマント",
+    back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10',}},
     }
 
     sets.engaged = {
-    ammo="完璧な幸運の卵",
+    range={ name="アンチテイル+1", augments={'Path: A',}},
     head="マリグナスシャポー",
     body="マリグナスタバード",
     hands="マリグナスグローブ",
     legs="マリグナスタイツ",
-    feet="ＳＫプーレーヌ+1",
+    feet="ＳＫプーレーヌ+3",
     neck="エルデションレンズ",
     waist={ name="セールフィベルト+1", augments={'Path: A',}},
     left_ear="シェリダピアス",
-    right_ear="マーケピアス+1",
-    left_ring="ゲリリング",
-    right_ring="エポナリング",
-    back="ヴェスピッドマント",
+    right_ear={ name="スカルカピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','"Store TP"+4',}},
+    left_ring="昏黄の指輪",
+    right_ring="イラブラットリング",
+    back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10',}},
     }
     sets.engaged.TH = set_combine(sets.engaged, sets.TreasureHunter)
 
     sets.engaged.DT = {
-    ammo={ name="コイストボダー", augments={'Path: A',}},
+    range={ name="アンチテイル+1", augments={'Path: A',}},
     head="マリグナスシャポー",
     body="マリグナスタバード",
     hands="マリグナスグローブ",
     legs="マリグナスタイツ",
-    feet="ＳＫプーレーヌ+1",
+    feet="ＳＫプーレーヌ+3",
     neck="エルデションレンズ",
     waist="チャークベルト",
     left_ear="シェリダピアス",
     right_ear="オノワイヤリング",
     left_ring="守りの指輪",
     right_ring="エポナリング",
-    back="トレピッドマント",
+    back={ name="トゥタティスケープ", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10',}},
     }
     sets.engaged.DT.TH = set_combine(sets.engaged.DT, sets.TreasureHunter)
 
