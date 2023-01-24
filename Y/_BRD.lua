@@ -156,25 +156,40 @@ function init_gear_sets()
     })
 
     sets.precast.WS.multi = set_combine(sets.Linos_ws, {
-        
     })
 
     sets.precast.WS.critical = set_combine(sets.Linos_ws, {
-
     })
 
-    sets.precast.WS.acc = {}
+    sets.precast.WS.magic = set_combine(sets.Linos_ws, {
+    head="ブンジハット",
+    body="ブンジローブ",
+    hands="ブンジグローブ",
+    legs="ブンジズボン",
+    feet="ブンジサボ",
+    neck="シビルスカーフ",
+    waist="レフォシレストーン",
+    left_ear="モルダバイトピアス",
+    right_ear={ name="胡蝶のイヤリング", augments={'Accuracy+4','TP Bonus +250',}},
+    left_ring={ name="メタモルリング+1", augments={'Path: A',}},
+    right_ring="女王の指輪+1",
+    back={ name="インタラアスケープ", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Enmity-10','Damage taken-5%',}},
+    })
+
+    sets.precast.WS.acc = set_combine(sets.Linos_ws, {
+    })
+
     sets.precast.WS.magic_acc = set_combine(sets.Linos_ws, { -- wsd
-    head="パルーグクラウン",
-    body="アヤモコラッツァ+2",
-    hands="アヤモマノポラ+2",
-    legs="アヤモコッシャレ+2",
-    feet="アヤモガンビエラ+2",
-    neck="月虹の呼び子+1",
-    waist="キャリアーサッシュ",
+    head="ＦＬキャロ+2",
+    body="ＦＬオングルリヌ+2",
+    hands="ＦＬマンシェト+2",
+    legs="ＦＬラングラヴ+2",
+    feet="ＦＬコテュルヌ+2",
+    neck="サンクトネックレス",
+    waist="エスカンストーン",
     left_ear="昏黄の耳飾り",
-    right_ear={ name="フィリピアス", augments={'System: 1 ID: 1676 Val: 0','Accuracy+6','Mag. Acc.+6',}},
-    left_ring="スティキニリング",
+    right_ear={ name="フィリピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Damage taken-4%',}},
+    left_ring="エタナリング",
     right_ring={ name="メタモルリング+1", augments={'Path: A',}},
     back={ name="インタラアスケープ", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Enmity-10','Damage taken-5%',}},
     })
@@ -189,7 +204,7 @@ function init_gear_sets()
     sets.precast.WS['エナジードレイン'] = sets.precast.WS
     sets.precast.WS['ダンシングエッジ'] = sets.precast.WS
     sets.precast.WS['シャークバイト'] = sets.precast.WS
-    sets.precast.WS['イオリアンエッジ'] = sets.precast.WS
+    sets.precast.WS['イオリアンエッジ'] = sets.precast.WS.magic
     sets.precast.WS['マーシーストローク'] = sets.precast.WS
     sets.precast.WS['エヴィサレーション'] = sets.precast.WS
     sets.precast.WS['エクゼンテレター'] = sets.precast.WS
@@ -276,9 +291,9 @@ function init_gear_sets()
 --        main="カルンウェナン",
 --        sub="アムラピシールド",
     range="シュリンクス",
-        head="ＢＲランドリト+3",
-        body="ＢＲジュスト+3",
-        hands="ＢＲカフス+3",
+        head="ＢＲランドリト+1",
+        body="ＦＬオングルリヌ+2",
+        hands="ＢＲカフス+2",
         legs="ＦＬラングラヴ+2",
         feet="ＢＲスリッパー+3",
         neck="月虹の呼び子+1",
@@ -329,7 +344,7 @@ function init_gear_sets()
     }
 
     sets.midcast['BardSong'] = sets.midcast.song_duration
-    sets.midcast['BardSong'].Paeon      = set_combine(sets.midcast.song_base, {head="ＢＲランドリト+3", legs="インヤガシャルワ+2",})
+    sets.midcast['BardSong'].Paeon      = set_combine(sets.midcast.song_base, {head="ＢＲランドリト+1", legs="インヤガシャルワ+2",})
     sets.midcast['BardSong'].Ballad     = set_combine(sets.midcast.song_base, {body="ＦＬオングルリヌ+2", legs="ＦＬラングラヴ+2", feet="ＢＲスリッパー+3",})
     sets.midcast['BardSong'].Minne      = set_combine(sets.midcast.song_base, {legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
     sets.midcast['BardSong'].Mambo      = set_combine(sets.midcast.song_base, {legs="インヤガシャルワ+2", feet="ＢＲスリッパー+3",})
@@ -367,8 +382,8 @@ function init_gear_sets()
     feet="ＦＬコテュルヌ+2",
     neck="サンクトネックレス",
     waist="キャリアーサッシュ",
-    left_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
-    right_ear="ハーティーピアス",
+    left_ear="ハーティーピアス",
+    right_ear={ name="オノワイヤリング+1", augments={'Path: A',}},
     left_ring="守りの指輪",
     right_ring="ＷＬリング+1",
     back={ name="インタラアスケープ", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','Enmity-10','Damage taken-5%',}},

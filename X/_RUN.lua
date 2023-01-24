@@ -213,7 +213,7 @@ function init_gear_sets()
     sets.precast.JA['エンボルド'] = {back={ name="ディバートケープ", augments={'Enmity+4','"Embolden"+15','"Dbl.Atk."+3','Damage taken-1%',}},}
     sets.precast.JA['ビベイシャス'] = {head={ name="ＥＲガレア+3", hp=111,}}
     sets.precast.JA['ガンビット'] = set_combine(sets.EnmityBoost, {hands={ name="ＲＮミトン+3", hp=85,}})
-    sets.precast.JA['レイク'] = set_combine(sets.EnmityBoost, {feet={ name="ＦＵブーツ+1", augments={'Enhances "Rayke" effect',}, hp=13,}})
+    sets.precast.JA['レイク'] = set_combine(sets.EnmityBoost, {feet={ name="ＦＵブーツ+3", augments={'Enhances "Rayke" effect',}, hp=13,}})
     sets.precast.JA['バットゥタ'] = set_combine(sets.EnmityBoost, {head={ name="ＦＵバンド+3", augments={'Enhances "Battuta" effect',}, hp=56,}})
     sets.precast.JA['ワンフォアオール'] = {
         ammo="ストンチタスラム+1",

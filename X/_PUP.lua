@@ -209,17 +209,17 @@ function init_gear_sets()
         right_ear="プラティクピアス",
     }
     
-    sets.precast.JA['オーバードライヴ'] = {body={ name="ＰＩトベ+2", augments={'Enhances "Overdrive" effect',}},}
-    sets.precast.JA['腹話術'] = {legs={ name="ＰＩチュリダル+3", augments={'Enhances "Ventriloquy" effect',}},}
-    sets.precast.JA['黒衣チェンジ'] = {feet={ name="ＰＩバブーシュ+3", augments={'Enhances "Role Reversal" effect',}},}
+    sets.precast.JA['オーバードライヴ'] = {body={ name="ＰＩトベ+3", augments={'Enhances "Overdrive" effect',}},}
+    sets.precast.JA['腹話術'] = {legs={ name="ＰＩチュリダル+2", augments={'Enhances "Ventriloquy" effect',}},}
+    sets.precast.JA['黒衣チェンジ'] = {feet={ name="ＰＩバブーシュ+1", augments={'Enhances "Role Reversal" effect',}},}
 
 
     sets.midcast.Pet['精霊魔法'] = {
         head={ name="ヘルクリアヘルム", augments={'Pet: "Mag.Atk.Bns."+29','Pet: INT+10',}},
         body={ name="ヘルクリアベスト", augments={'Pet: "Mag.Atk.Bns."+30','Pet: "Subtle Blow"+10','Pet: INT+5','Pet: Attack+14 Pet: Rng.Atk.+14',}},
         hands={ name="ヘルクリアグローブ", augments={'Pet: "Mag.Atk.Bns."+24','Pet: Phys. dmg. taken -1%','Pet: INT+12','Pet: Attack+14 Pet: Rng.Atk.+14',}},
-        legs={ name="ＰＩチュリダル+3", augments={'Enhances "Ventriloquy" effect',}},
-        feet={ name="ＰＩバブーシュ+3", augments={'Enhances "Role Reversal" effect',}},
+        legs={ name="ＰＩチュリダル+2", augments={'Enhances "Ventriloquy" effect',}},
+        feet={ name="ＰＩバブーシュ+1", augments={'Enhances "Role Reversal" effect',}},
         neck="絡繰士の首輪+2",
         waist="ウッコサッシュ",
     left_ear="エンメルカルピアス",
@@ -233,7 +233,7 @@ function init_gear_sets()
         head="ニャメヘルム",
         body="ニャメメイル",
         hands="ニャメガントレ",
-        legs={ name="ＰＩチュリダル+3", augments={'Enhances "Ventriloquy" effect',}},
+        legs={ name="ＰＩチュリダル+2", augments={'Enhances "Ventriloquy" effect',}},
         feet="ＦＯバブーシュ+3",
         neck="絡繰士の首輪+2",
         waist="ウッコサッシュ",
@@ -269,15 +269,15 @@ function init_gear_sets()
     }
 
     sets.engaged = {
-    head="タリアターバン+2",
-    body={ name="ＰＩトベ+2", augments={'Enhances "Overdrive" effect',}},
-    hands="ＫＧグアンティ+3",
+    head={ name="ヘルクリアヘルム", augments={'Pet: "Store TP"+11','Pet: STR+1','Pet: Attack+2 Pet: Rng.Atk.+2',}},
+    body={ name="ＰＩトベ+3", augments={'Enhances "Overdrive" effect',}},
+    hands={ name="ヘルクリアグローブ", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Pet: "Store TP"+11','Pet: CHR+2','Pet: Attack+11 Pet: Rng.Atk.+11',}},
     legs={ name="ヘルクリアトラウザ", augments={'Pet: Mag. Acc.+4','Pet: "Store TP"+11','Pet: STR+8','Pet: Attack+10 Pet: Rng.Atk.+10',}},
-    feet="ムパカブーツ",
+    feet={ name="ヘルクリアブーツ", augments={'Pet: "Mag.Atk.Bns."+24','Pet: "Store TP"+11','Pet: DEX+3','Pet: Attack+15 Pet: Rng.Atk.+15',}},
     neck="シュルマヌカラー",
     waist="クルスカサッシュ+1",
-    left_ear="昏黄の耳飾り",
-    right_ear={ name="カラゴズピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+14','Mag. Acc.+14','"Store TP"+5',}},
+    left_ear="エンメルカルピアス",
+    right_ear={ name="カラゴズピアス+2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','"Store TP"+6','STR+9 DEX+9',}},
     left_ring="ヴァラールリング+1",
     right_ring="パルーグリング",
     back={ name="ビスシアスマント", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Accuracy+10 Pet: Rng. Acc.+10','Pet: Haste+10','Pet: Damage taken -5%',}},
@@ -319,15 +319,15 @@ function init_gear_sets()
     }
 
     sets.idle.Pet.Engaged = {
-    head="タリアターバン+2",
-    body={ name="ＰＩトベ+2", augments={'Enhances "Overdrive" effect',}},
-    hands={ name="テーオングローブ", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Haste+5',}},
+    head={ name="ヘルクリアヘルム", augments={'Pet: "Store TP"+11','Pet: STR+1','Pet: Attack+2 Pet: Rng.Atk.+2',}},
+    body={ name="ＰＩトベ+3", augments={'Enhances "Overdrive" effect',}},
+    hands={ name="ヘルクリアグローブ", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Pet: "Store TP"+11','Pet: CHR+2','Pet: Attack+11 Pet: Rng.Atk.+11',}},
     legs={ name="ヘルクリアトラウザ", augments={'Pet: Mag. Acc.+4','Pet: "Store TP"+11','Pet: STR+8','Pet: Attack+10 Pet: Rng.Atk.+10',}},
-    feet={ name="ヘルクリアブーツ", augments={'Pet: Accuracy+26 Pet: Rng. Acc.+26','Pet: "Store TP"+8','Pet: DEX+8','Pet: "Mag.Atk.Bns."+5',}},
+    feet={ name="ヘルクリアブーツ", augments={'Pet: "Mag.Atk.Bns."+24','Pet: "Store TP"+11','Pet: DEX+3','Pet: Attack+15 Pet: Rng.Atk.+15',}},
     neck="シュルマヌカラー",
     waist="クルスカサッシュ+1",
     left_ear="エンメルカルピアス",
-    right_ear={ name="カラゴズピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+14','Mag. Acc.+14','"Store TP"+5',}},
+    right_ear={ name="カラゴズピアス+2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','"Store TP"+6','STR+9 DEX+9',}},
     left_ring="ヴァラールリング+1",
     right_ring="パルーグリング",
     back={ name="ビスシアスマント", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Accuracy+10 Pet: Rng. Acc.+10','Pet: Haste+10','Pet: Damage taken -5%',}},
@@ -423,15 +423,15 @@ function init_gear_sets()
     }
 
     sets.idle.Pet.Engaged.Melee.Stp =  {
-    head="タリアターバン+2",
-    body={ name="ＰＩトベ+2", augments={'Enhances "Overdrive" effect',}},
-    hands={ name="テーオングローブ", augments={'Pet: Accuracy+25 Pet: Rng. Acc.+25','Pet: "Dbl. Atk."+5','Pet: Haste+5',}},
+    head={ name="ヘルクリアヘルム", augments={'Pet: "Store TP"+11','Pet: STR+1','Pet: Attack+2 Pet: Rng.Atk.+2',}},
+    body={ name="ＰＩトベ+3", augments={'Enhances "Overdrive" effect',}},
+    hands={ name="ヘルクリアグローブ", augments={'Pet: Accuracy+28 Pet: Rng. Acc.+28','Pet: "Store TP"+11','Pet: CHR+2','Pet: Attack+11 Pet: Rng.Atk.+11',}},
     legs={ name="ヘルクリアトラウザ", augments={'Pet: Mag. Acc.+4','Pet: "Store TP"+11','Pet: STR+8','Pet: Attack+10 Pet: Rng.Atk.+10',}},
-    feet={ name="ヘルクリアブーツ", augments={'Pet: Accuracy+26 Pet: Rng. Acc.+26','Pet: "Store TP"+8','Pet: DEX+8','Pet: "Mag.Atk.Bns."+5',}},
+    feet={ name="ヘルクリアブーツ", augments={'Pet: "Mag.Atk.Bns."+24','Pet: "Store TP"+11','Pet: DEX+3','Pet: Attack+15 Pet: Rng.Atk.+15',}},
     neck="シュルマヌカラー",
     waist="クルスカサッシュ+1",
     left_ear="エンメルカルピアス",
-    right_ear={ name="カラゴズピアス+1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+14','Mag. Acc.+14','"Store TP"+5',}},
+    right_ear={ name="カラゴズピアス+2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','"Store TP"+6','STR+9 DEX+9',}},
     left_ring="ヴァラールリング+1",
     right_ring="パルーグリング",
     back={ name="ビスシアスマント", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Accuracy+10 Pet: Rng. Acc.+10','Pet: Haste+10','Pet: Damage taken -5%',}},
@@ -445,7 +445,7 @@ function init_gear_sets()
         head={ name="那伽総面", augments={'Pet: MP+80','Automaton: "Cure" potency +4%','Automaton: "Fast Cast"+3',}},
         body={ name="那伽作務衣", augments={'Pet: MP+80','Automaton: "Cure" potency +4%','Automaton: "Fast Cast"+3',}},
         hands={ name="那伽手甲", augments={'Pet: MP+80','Automaton: "Cure" potency +4%','Automaton: "Fast Cast"+3',}},
-        legs={ name="ＰＩチュリダル+3", augments={'Enhances "Ventriloquy" effect',}},
+        legs={ name="ＰＩチュリダル+2", augments={'Enhances "Ventriloquy" effect',}},
         feet={ name="那伽脚絆", augments={'Pet: MP+80','Automaton: "Cure" potency +4%','Automaton: "Fast Cast"+3',}},
         neck="ロリケートトルク+1",
         waist="ウッコサッシュ",
@@ -508,7 +508,7 @@ end
 function customize_melee_set(meleeSet)
     local weapons = sets.weapons
     if pet.isvalid then
-    if pet.tp > 1000 then
+    if pet.tp > 800 then
         meleeSet = set_combine(idleSet, weapons[state.Weapons.value], sets.animator[state.Animator.value], {
     head="ＫＧカペッロ+2",
     body="ＫＧファルセト+2",

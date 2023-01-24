@@ -2,7 +2,7 @@
 include('simple_auto')
 
 function init_auto_mode()
-    state.AutoMode = M{['description']='Auto Mode', 'Off', 'Setup', 'Engage'}
+    state.AutoMode = M{['description']='Auto Mode', 'Off', 'Setup', 'Engage', 'Steps'}
     state.AutoWS = M(false, "Auto WS")
 end
 
@@ -14,17 +14,23 @@ function simple_tick()
 
     if current_auto_mode == 'Setup' then
         if not moving and check_spell_buff() then return true end
-        if state.AutoWS.current == 'on' then
-            if check_ws() then return true end
-        end
     elseif current_auto_mode == 'Engage' then
         if player.status ~= 'Engaged' then return false end
-        if check_ability_buff() then return true end
         if not moving and check_spell_buff() then return true end
         if state.AutoWS.current == 'on' then
             if check_ws() then return true end
         end
         if not moving and check_enmity() then return true end
+        if check_ability_buff() then return true end
+    elseif current_auto_mode == 'Steps' then
+        if player.status ~= 'Engaged' then return false end
+        if not moving and check_spell_buff() then return true end
+        if state.AutoWS.current == 'on' then
+            if check_ws() then return true end
+        end
+        if not moving and check_enmity() then return true end
+        if check_ability_buff() then return true end
+        if check_steps() then return true end
     end
     return false
 end
@@ -94,8 +100,11 @@ local ability_buff_lists = {
 --    {name='コンスピレーター', id=40},
 }
 
-local samba = {name='ヘイストサンバ', buff='ヘイストサンバ', id=216, t='<me>', job='踊', overwrite=5, use_tp=350}
-local steps = {name='ボックスステップ', buff='フィニシングムーブ5', id=220, t='<bt>', job='踊', overwrite=0, use_tp=100}
+local warcry = {
+    [1] = {name='ウォークライ', buff='ウォークライ', id=2},
+    [2] = {name='ブラッドレイジ', buff='ブラッドレイジ', id=11},
+}
+local samba = {name='ヘイストサンバ', buff='ヘイストサンバ', id=216, overwrite=5, use_tp=350}
 
 function check_ability_buff()
     if not check_can_use_ability() then return false end
@@ -107,6 +116,17 @@ function check_ability_buff()
             windower.chat.input('/ja "'..windower.to_shift_jis(v.name) ..'" <me>')
             tickdelay = os.clock() + 2
             return true
+        end
+    end
+
+    -- warcry
+    if player.sub_job == '戦' then
+        if not buffactive[warcry[1].buff] and not buffactive[warcry[2].buff] then
+            if recasts[warcry[1].id] == 0 then
+                windower.chat.input('/ja "'..windower.to_shift_jis(warcry[1].name) ..'" <me>')
+                tickdelay = os.clock() + 2
+                return true
+            end
         end
     end
 
@@ -129,24 +149,32 @@ function check_ability_buff()
         end
     end
 
+    return false
+end
+
+local steps = {name='ボックスステップ', id=220, use_tp=100}
+local Flourish = {name='R.フラリッシュ', buff='フィニシングムーブ5', id=222}
+function check_steps()
+    if not check_can_use_ability() then return false end
+    local recasts = windower.ffxi.get_ability_recasts()
+    local buffs = player.buff_details
+
+    -- Flourish
+    if buffactive[Flourish.buff] and recasts[Flourish.id] == 0 then
+        windower.chat.input('/ja "'..windower.to_shift_jis(Flourish.name) ..'" <me>')
+        tickdelay = os.clock() + 2
+        return true
+    end
+
     -- steps
-    if player.sub_job == '踊' and player.tp > steps.use_tp then
-        if not buffactive[steps.buff] and recasts[steps.id] == 0 then
+    if player.sub_job == '踊' and player.tp > steps.use_tp then    
+        if recasts[steps.id] == 0 then
             windower.chat.input('/ja "'..windower.to_shift_jis(steps.name) ..'" <t>')
             tickdelay = os.clock() + 2
             return true
-        else
-            for i = 1, #buffs do
-                if buffs[i] and buffs[i].name == steps.buff and 
-                    buffs[i].duration < steps.overwrite and
-                    recasts[steps.id] == 0 then
-                    windower.chat.input('/ja "'..windower.to_shift_jis(steps.name) ..'" <t>')
-                    tickdelay = os.clock() + 2
-                    return true
-                end
-            end
         end
     end
+
     return false
 end
 
@@ -217,10 +245,10 @@ function check_spell_buff()
 end
 
 local use_ws = {
-    [1] = 'サベッジブレード',
+--    [1] = 'サベッジブレード',
 --    [1] = 'エヴィサレーション',
 --    [2] = 'ルドラストーム',
---    [3] = 'ルドラストーム',
+    [1] = 'イオリアンエッジ',
 }
 local ws_index = 1
 local ws_target_id = 0

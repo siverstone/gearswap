@@ -77,6 +77,7 @@ local sub_job_enmity_lists = {
 --    {name='挑発', id=5, pf='/ja', t='t', job='戦'},
 --    {name='スタン', id=252, pf='/ma', t='t', job='暗'},
 --    {name='ウェポンバッシュ', id=88, pf='/ja', t='t', job='暗'},
+      {name='アブゾタック', id=275, pf='/ma', t='t', job='暗'},
       {name='ジェタチュラ', id=575, pf='/ma', t='t', job='青'},
       {name='ガイストウォール', id=605, pf='/ma', t='t', job='青'},
       {name='シープソ\\ング', id=584, pf='/ma', t='t', job='青'},
@@ -285,22 +286,28 @@ function check_spell_buff()
     return false
 end
 
-local use_ws = 'デミディエーション'
+local use_ws = {
+--  [1] = 'デミディエーション',
+  [1] = 'ショックウェーブ',
+}
+local ws_index = 1
+local ws_target_id = 0
 function check_ws()
-    if not check_can_use_ability() then return false end
-    if buffactive['アフターマス:Lv3'] then
-        if player.tp >= 1000 then
-            windower.chat.input('/ws "'..windower.to_shift_jis(use_ws) ..'" <t>')
-            tickdelay = os.clock() + 5
-            return true
-        end
-    else
-        if player.tp == 3000 then
-            windower.chat.input('/ws "'..windower.to_shift_jis(use_ws) ..'" <t>')
-            tickdelay = os.clock() + 5
-            return true
-        end
+    if not check_can_use_ws() then return false end
+    if player.tp >= 1000 then
+        ws_target_id = windower.ffxi.get_mob_by_target('t').id
+        windower.chat.input('/ws "'..windower.to_shift_jis(use_ws[ws_index]) ..'" <t>')
+        ws_index = ws_index % #use_ws + 1
+        tickdelay = os.clock() + 5
+        return true
     end
-
     return false
 end
+
+windower.raw_register_event("action message", function(actor_id, target_id, actor_index, target_index, message_id, param_1, param_2, param_3)
+    if message_id == 6 or message_id == 20 then
+        if target_id == ws_target_id then
+            ws_index = 1
+        end
+    end
+end)
